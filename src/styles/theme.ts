@@ -1,3 +1,6 @@
+import { ThemeEnum } from 'interfaces/styled.model';
+import { DefaultTheme } from 'styled-components';
+
 export const baseTheme = {
   colors: {
     primary: '#185CFF',
@@ -8,8 +11,33 @@ export const baseTheme = {
     steel: '#C9DCEC',
     black: '#292D33',
     grey: '#9497A1',
+    greyly: '#D7D7D7',
     background: '#F1F6FA',
     error: '#C14040',
+    white: '#FFFFFF',
+    hover: '#292D33',
+    hoverButton: '#FFFFFF',
+  },
+
+  gaps: [10, 40, 145],
+
+  sizes: {
+    container: {
+      width: [328, 540, 720, 960, 1110],
+    },
+    button: {
+      width: 168,
+      height: 44,
+    },
+    navigation: {
+      width: 511,
+    },
+    header: {
+      height: 126,
+    },
+    footer: {
+      height: 530,
+    },
   },
 
   media: {
@@ -17,6 +45,27 @@ export const baseTheme = {
     large: '(max-width: 960px)',
     medium: '(max-width: 720px)',
     small: '(max-width: 540px)',
-    mobile: '(max-width: 328px)',
+    mobile: '(max-width: 360px)',
+  },
+};
+
+export const lightTheme: DefaultTheme = {
+  ...baseTheme,
+  type: ThemeEnum.light,
+};
+
+export const darkTheme: DefaultTheme = {
+  ...baseTheme,
+  type: ThemeEnum.dark,
+
+  colors: {
+    ...baseTheme.colors,
+    background: baseTheme.colors.secondary,
+    primary: baseTheme.colors.white,
+    black: baseTheme.colors.white,
+    grey: baseTheme.colors.white,
+    hover: baseTheme.colors.greyly,
+    white: baseTheme.colors.secondary,
+    hoverButton: baseTheme.colors.primary,
   },
 };

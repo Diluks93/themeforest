@@ -1,9 +1,9 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 
-import { App } from 'components';
-import { baseTheme, GlobalStyle } from 'styles';
+import { App, LightModeProvider, ThemeProvider } from 'components';
+import { GlobalStyle, FontStyles } from 'styles';
 import { reportWebVitals } from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -11,11 +11,18 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <StrictMode>
-    <ThemeProvider theme={baseTheme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <LightModeProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          <GlobalStyle />
+          <FontStyles />
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </LightModeProvider>
   </StrictMode>
 );
 
-reportWebVitals(console.log);
+reportWebVitals(
+  process.env.NODE_ENV !== 'production' ? console.log : undefined
+);
