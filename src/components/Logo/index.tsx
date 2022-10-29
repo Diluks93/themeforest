@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 
+import { useToggleLightMode } from 'components';
 import { LogoBlue, LogoWhite } from 'static';
 
-export const Logo: FC<{ isOn: boolean; onClick: () => void }> = ({
-  isOn,
-  onClick,
-}) => {
+export const Logo: FC<{ isOn?: boolean }> = ({ isOn }) => {
+  const { toggleLightMode } = useToggleLightMode();
+
   return isOn ? (
-    <LogoBlue onClick={onClick} />
+    <LogoBlue onClick={toggleLightMode} />
   ) : (
-    <LogoWhite onClick={onClick} />
+    <LogoWhite onClick={toggleLightMode} />
   );
 };

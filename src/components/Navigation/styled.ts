@@ -5,7 +5,7 @@ export const NavigationStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: ${({ theme }) => theme.gaps[1]}px;
+  column-gap: ${({ theme }) => theme.gaps[2]}px;
   width: ${({ theme }) => theme.sizes.navigation.width}px;
 
   @media ${({ theme }) => theme.media.mobile} {

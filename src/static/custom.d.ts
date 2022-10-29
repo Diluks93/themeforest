@@ -11,4 +11,6 @@ declare module '*.svg' {
 
 declare module '*.ttf';
 declare module '*.woff2';
+declare module '*.woff';
 declare module '*.otf';
+declare module '*.eot';

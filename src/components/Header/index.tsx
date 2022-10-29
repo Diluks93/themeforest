@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import {
-  useToggleLightMode,
   Logo,
   Button,
   Navigation,
   BurgerMenu,
+  useToggleLightMode,
 } from 'components';
 import { Play } from 'static';
 import { Container } from 'styles';
 
 import { HeaderStyled } from './styled';
 
-export function Header() {
-  const { isLightMode, toggleLightMode } = useToggleLightMode();
+function HeaderWithoutMemo() {
+  const { isLightMode } = useToggleLightMode();
 
   return (
     <HeaderStyled>
       <Container $flex>
-        <Logo isOn={isLightMode} onClick={toggleLightMode} />
+        <Logo isOn={isLightMode} />
         <Navigation />
         <Button>
           <Play />
@@ -29,3 +29,5 @@ export function Header() {
     </HeaderStyled>
   );
 }
+
+export const Header = memo(HeaderWithoutMemo);

@@ -11,6 +11,7 @@ export const baseTheme = {
     steel: '#C9DCEC',
     black: '#292D33',
     grey: '#9497A1',
+    footer: '#9497A1',
     greyly: '#D7D7D7',
     background: '#F1F6FA',
     error: '#C14040',
@@ -19,7 +20,7 @@ export const baseTheme = {
     hoverButton: '#FFFFFF',
   },
 
-  gaps: [10, 40, 145],
+  gaps: [10, 15, 40, 145, 190, 376, 515],
 
   sizes: {
     container: {
@@ -67,5 +68,7 @@ export const darkTheme: DefaultTheme = {
     hover: baseTheme.colors.greyly,
     white: baseTheme.colors.secondary,
     hoverButton: baseTheme.colors.primary,
+    steel: baseTheme.colors.grey,
+    footer: baseTheme.colors.grey,
   },
 };

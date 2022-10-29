@@ -13,9 +13,18 @@ import ManropeSemiBold from 'static/fonts/Manrope/Manrope-SemiBold.ttf';
 import ManropeSemiBoldW from 'static/fonts/Manrope/Manrope-SemiBold.woff2';
 import ManropeSemiBoldO from 'static/fonts/Manrope/Manrope-SemiBold.otf';
 
-import OpenSansRegular from 'static/fonts/Open_Sans/OpenSans-Regular.ttf';
-import OpenSansBold from 'static/fonts/Open_Sans/OpenSans-Bold.ttf';
-import OpenSansSemiBold from 'static/fonts/Open_Sans/OpenSans-SemiBold.ttf';
+import OpenSansRegular from 'static/fonts/Open_Sans/open-sans-v34-latin-regular.ttf';
+import OpenSansRegularE from 'static/fonts/Open_Sans/open-sans-v34-latin-regular.eot';
+import OpenSansRegularW2 from 'static/fonts/Open_Sans/open-sans-v34-latin-regular.woff2';
+import OpenSansRegularW from 'static/fonts/Open_Sans/open-sans-v34-latin-regular.woff';
+import OpenSansBold from 'static/fonts/Open_Sans/open-sans-v34-latin-700.ttf';
+import OpenSansBoldE from 'static/fonts/Open_Sans/open-sans-v34-latin-700.eot';
+import OpenSansBoldW2 from 'static/fonts/Open_Sans/open-sans-v34-latin-700.woff2';
+import OpenSansBoldW from 'static/fonts/Open_Sans/open-sans-v34-latin-700.woff';
+import OpenSansSemiBold from 'static/fonts/Open_Sans/open-sans-v34-latin-600.ttf';
+import OpenSansSemiBoldE from 'static/fonts/Open_Sans/open-sans-v34-latin-600.eot';
+import OpenSansSemiBoldW2 from 'static/fonts/Open_Sans/open-sans-v34-latin-600.woff2';
+import OpenSansSemiBoldW from 'static/fonts/Open_Sans/open-sans-v34-latin-600.woff';
 
 export const FontStyles = createGlobalStyle`
 
@@ -59,20 +68,29 @@ export const FontStyles = createGlobalStyle`
   font-family: 'Open Sans';
   font-style: regular;
   font-weight: 400;
-  src: url(${OpenSansRegular}) format('ttf');
+  src: url(${OpenSansRegular}) format('ttf'),
+       url(${OpenSansRegularW2}) format('woff2'),
+       url(${OpenSansRegularW}) format('woff'),
+       url(${OpenSansRegularE}) format('eot');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: bold;
   font-weight: 700;
-  src: url(${OpenSansBold}) format('ttf');
+  src: url(${OpenSansBold}) format('ttf'),
+       url(${OpenSansBoldW2}) format('woff2'),
+       url(${OpenSansBoldW}) format('woff'),
+       url(${OpenSansBoldE}) format('eot');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: bold;
   font-weight: 600;
-  src: url(${OpenSansSemiBold}) format('ttf');
+  src: url(${OpenSansSemiBold}) format('ttf'),
+       url(${OpenSansSemiBoldW2}) format('woff2'),
+       url(${OpenSansSemiBoldW}) format('woff'),
+       url(${OpenSansSemiBoldE}) format('eot');
 }
 `;

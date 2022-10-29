@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { Header } from 'components';
+import { Header, Footer } from 'components';
 import { PathsToPage } from 'constants/';
+import { darkTheme, lightTheme } from 'styles';
 
 const HomePage = lazy(() => import('pages/Home'));
 const SolutionsPage = lazy(() => import('pages/Solutions'));
@@ -15,6 +17,9 @@ const FAQPage = lazy(() => import('pages/FAQ'));
 const ServicesPage = lazy(() => import('pages/Services'));
 
 export function App() {
+  const invertTheme = (baseTheme: DefaultTheme) =>
+    baseTheme.type !== 'light' ? lightTheme : darkTheme;
+
   return (
     <Suspense fallback="Loading...">
       <Header />
@@ -30,6 +35,9 @@ export function App() {
         <Route path={PathsToPage.SERVICES} element={<ServicesPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
+      <ThemeProvider theme={invertTheme}>
+        <Footer />
+      </ThemeProvider>
     </Suspense>
   );
 }

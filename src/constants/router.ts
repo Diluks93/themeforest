@@ -8,4 +8,6 @@ export const enum PathsToPage {
   TEAM = '/team',
   FAQ = '/faq',
   SERVICES = '/services',
+  MAP = '/map',
+  PRICING = '/pricing',
 }

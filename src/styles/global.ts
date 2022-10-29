@@ -31,18 +31,18 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div<{ $flex?: boolean }>`
   max-width: ${({ theme }) => theme.sizes.container.width[4]}px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   ${({ $flex }) =>
     $flex
       ? css`
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          column-gap: ${({ theme }) => theme.gaps[2]}px;
+          column-gap: ${({ theme }) => theme.gaps[3]}px;
         `
       : css`
-          display: block;
-          margin: 0 auto;
+          flex-direction: column;
+          row-gap: ${({ theme }) => theme.gaps[2]}px;
         `}
 
   @media ${({ theme }) => theme.media.large} {

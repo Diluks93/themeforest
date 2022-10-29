@@ -37,7 +37,7 @@ export const UnorderedList = styled.ul`
 
 export const ListItemStyled = styled(Link)`
   padding: 10px 20px;
-  column-gap: 10px;
+  column-gap: ${({ theme }) => theme.gaps[0]}px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;

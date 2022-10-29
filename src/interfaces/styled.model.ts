@@ -18,6 +18,7 @@ export interface InterfaceTheme {
     white: string;
     hover: string;
     hoverButton: string;
+    footer: string;
   };
 
   sizes: {
