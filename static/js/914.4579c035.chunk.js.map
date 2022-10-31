@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/914.4579c035.chunk.js","mappings":"iLAEe,SAASA,IACtB,OAAO,8CACT,C","sources":["pages/FAQ/index.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function FAQPage() {\r\n  return <main>FAQ page working</main>;\r\n}\r\n"],"names":["FAQPage"],"sourceRoot":""}

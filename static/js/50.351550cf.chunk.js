@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[50],{8050:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});t(2791);var r=t(184);function u(){return(0,r.jsx)("main",{children:"Elements page working"})}}}]);
+//# sourceMappingURL=50.351550cf.chunk.js.map

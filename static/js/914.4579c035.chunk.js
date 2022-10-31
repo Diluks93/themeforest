@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[914],{3914:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});t(2791);var r=t(184);function u(){return(0,r.jsx)("main",{children:"FAQ page working"})}}}]);
+//# sourceMappingURL=914.4579c035.chunk.js.map

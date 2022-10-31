@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/526.05db8d9b.chunk.js","mappings":"iLAEe,SAASA,IACtB,OAAO,+CACT,C","sources":["pages/Team/index.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function TeamPage() {\r\n  return <main>Team page working</main>;\r\n}\r\n"],"names":["TeamPage"],"sourceRoot":""}

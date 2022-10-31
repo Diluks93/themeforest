@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/778.fee1e3ac.chunk.js","mappings":"iLAEe,SAASA,IACtB,OAAO,oDACT,C","sources":["pages/Solutions/index.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function SolutionsPage() {\r\n  return <main>Solutions page working</main>;\r\n}\r\n"],"names":["SolutionsPage"],"sourceRoot":""}
