@@ -70,5 +70,6 @@ export const darkTheme: DefaultTheme = {
     hoverButton: baseTheme.colors.primary,
     steel: baseTheme.colors.grey,
     footer: baseTheme.colors.grey,
+    tertiary: baseTheme.colors.steel,
   },
 };

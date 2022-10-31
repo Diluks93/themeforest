@@ -1,4 +1,4 @@
-import React, { memo, ReactNode } from 'react';
+import React, { memo, PropsWithChildren } from 'react';
 
 import { PathsToPage } from 'constants/';
 
@@ -11,7 +11,7 @@ import {
   Address,
 } from './styled';
 
-function ContactsWithoutMemo({ children }: { children: ReactNode }) {
+function ContactsWithoutMemo({ children }: PropsWithChildren) {
   return (
     <ContactsStyled>
       {children}

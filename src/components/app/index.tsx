@@ -33,7 +33,14 @@ export function App() {
         <Route path={PathsToPage.TEAM} element={<TeamPage />} />
         <Route path={PathsToPage.FAQ} element={<FAQPage />} />
         <Route path={PathsToPage.SERVICES} element={<ServicesPage />} />
-        <Route path="*" element={<HomePage />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
       <ThemeProvider theme={invertTheme}>
         <Footer />

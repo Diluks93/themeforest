@@ -1,4 +1,4 @@
-import React, { RefObject, useMemo } from 'react';
+import React, { RefObject } from 'react';
 
 import {
   Logo,
@@ -15,39 +15,30 @@ import { Container } from 'styles';
 
 import { FooterStyled, Wrapper, Line, Title, Paragraph } from './styled';
 
+const aboutColumn = [
+  PathsToPage.HOME,
+  PathsToPage.ABOUT_US,
+  PathsToPage.SERVICES,
+  PathsToPage.SOLUTIONS,
+];
+
+const informationColumn = [
+  PathsToPage.CONTACTS,
+  PathsToPage.TEAM,
+  PathsToPage.BLOG,
+  PathsToPage.FAQ,
+];
+
+const serviceColumn = [
+  PathsToPage.ELEMENTS,
+  PathsToPage.MAP,
+  PathsToPage.PRICING,
+  PathsToPage.FAQ,
+];
+
 export function Footer() {
   const { containerRef, isOpen, toggleOpen, renderDropdown } = useDropdown();
   const { isLightMode } = useToggleLightMode();
-
-  const aboutColumn = useMemo(
-    () => [
-      PathsToPage.HOME,
-      PathsToPage.ABOUT_US,
-      PathsToPage.SERVICES,
-      PathsToPage.SOLUTIONS,
-    ],
-    []
-  );
-
-  const informationColumn = useMemo(
-    () => [
-      PathsToPage.CONTACTS,
-      PathsToPage.TEAM,
-      PathsToPage.BLOG,
-      PathsToPage.FAQ,
-    ],
-    []
-  );
-
-  const serviceColumn = useMemo(
-    () => [
-      PathsToPage.ELEMENTS,
-      PathsToPage.MAP,
-      PathsToPage.PRICING,
-      PathsToPage.FAQ,
-    ],
-    []
-  );
 
   return (
     <FooterStyled>

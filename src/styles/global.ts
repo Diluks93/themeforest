@@ -9,11 +9,17 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
   body {
     min-height: 100vh;
     display: grid;
     place-content: center;
     text-align: center;
+
     &::-webkit-scrollbar {
       width: 0;
       background-color: transparent;
@@ -29,8 +35,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Container = styled.div<{ $flex?: boolean }>`
+export const Container = styled.div<{ $flex?: boolean; $unique?: boolean }>`
   max-width: ${({ theme }) => theme.sizes.container.width[4]}px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,12 +45,20 @@ export const Container = styled.div<{ $flex?: boolean }>`
   ${({ $flex }) =>
     $flex
       ? css`
-          column-gap: ${({ theme }) => theme.gaps[3]}px;
+          column-gap: ${({ theme }) => theme.gaps[2]}px;
         `
       : css`
           flex-direction: column;
           row-gap: ${({ theme }) => theme.gaps[2]}px;
+          column-gap: ${({ theme }) => theme.gaps[2]}px;
         `}
+
+  ${({ $unique }) =>
+    $unique
+      ? css`
+          column-gap: ${({ theme }) => theme.gaps[3]}px;
+        `
+      : css``}
 
   @media ${({ theme }) => theme.media.large} {
     max-width: ${({ theme }) => theme.sizes.container.width[3]}px;
