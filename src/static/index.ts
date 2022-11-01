@@ -23,10 +23,16 @@ import { ReactComponent as Logo5 } from './icons/logo_5.svg';
 import { ReactComponent as Logo6 } from './icons/logo_6.svg';
 import { ReactComponent as Logo7 } from './icons/logo_7.svg';
 import { ReactComponent as Brain } from './icons/brain_circuit.svg';
+import { ReactComponent as BigBrain } from './icons/service_brain.svg';
 import { ReactComponent as Upper } from './icons/upper.svg';
+import { ReactComponent as BigUpper } from './icons/service_consalting.svg';
 import { ReactComponent as Key } from './icons/key.svg';
+import { ReactComponent as BigKey } from './icons/service_key.svg';
 import { ReactComponent as Analytic } from './icons/icon_analytic.svg';
+import { ReactComponent as BigAnalytic } from './icons/service_analytic.svg';
 import { ReactComponent as Checkmark } from './icons/icon_checkmark.svg';
+import { ReactComponent as BigData } from './icons/service_data.svg';
+import { ReactComponent as BigIntelligence } from './icons/service_intelligence.svg';
 
 export {
   LogoBlue,
@@ -52,8 +58,14 @@ export {
   Logo6,
   Logo7,
   Brain,
+  BigBrain,
   Upper,
+  BigUpper,
   Key,
+  BigKey,
   Analytic,
+  BigAnalytic,
   Checkmark,
+  BigData,
+  BigIntelligence,
 };

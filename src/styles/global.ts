@@ -35,7 +35,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Container = styled.div<{ $flex?: boolean; $unique?: boolean }>`
+export const Container = styled.div<{
+  $flex?: boolean;
+  $unique?: boolean;
+  $row?: boolean;
+}>`
   max-width: ${({ theme }) => theme.sizes.container.width[4]}px;
   width: 100%;
   display: flex;
@@ -57,6 +61,15 @@ export const Container = styled.div<{ $flex?: boolean; $unique?: boolean }>`
     $unique
       ? css`
           column-gap: ${({ theme }) => theme.gaps[3]}px;
+        `
+      : css``}
+
+  ${({ $row }) =>
+    $row
+      ? css`
+          gap: 30px;
+          flex-wrap: wrap;
+          flex-direction: row;
         `
       : css``}
 

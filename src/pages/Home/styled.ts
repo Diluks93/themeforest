@@ -70,8 +70,6 @@ export const Description = styled.p<{
 
 export const Wrapper = styled.div<{
   $align?: boolean;
-  $row?: boolean;
-  $col?: boolean;
 }>`
   display: flex;
   flex-direction: column;
@@ -82,25 +80,6 @@ export const Wrapper = styled.div<{
     $align
       ? css`
           align-items: flex-start;
-        `
-      : css``};
-
-  ${({ $row }) =>
-    $row
-      ? css`
-          align-items: center;
-          justify-content: space-between;
-          flex-direction: row;
-          width: 100%;
-          column-gap: ${({ theme }) => theme.gaps[2]}px;
-        `
-      : css``};
-
-  ${({ $col }) =>
-    $col
-      ? css`
-          flex-direction: row;
-          column-gap: 30px;
         `
       : css``};
 `;

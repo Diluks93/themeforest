@@ -1,7 +1,7 @@
 import { PathsToPage } from 'constants/';
 import { useMemo } from 'react';
 
-export const useNamePath = (path: PathsToPage) =>
+export const useNamePath = (path: PathsToPage | string) =>
   useMemo(
     () =>
       path
