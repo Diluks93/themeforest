@@ -1,5 +1,6 @@
-import { PropsWithChildren, useCallback, useEffect, useState } from 'react';
+import { PropsWithChildren } from 'react';
 
+import { useCarousel } from 'hooks/useCarousel';
 import { PathsToPage } from 'constants/';
 import { ArrowLeft, ArrowRight } from 'static';
 import blog1 from 'static/images/001_img_blog.webp';
@@ -45,33 +46,7 @@ function Card({ src, name }: { src: string; name: string }) {
 }
 
 export function Blogs({ children }: PropsWithChildren) {
-  const [cards, setCards] = useState(dataCard);
-
-  const handleRightClick = useCallback(() => {
-    const firstItem = cards.shift();
-
-    if (firstItem) {
-      cards.push(firstItem);
-    }
-
-    setCards([...cards]);
-  }, [cards]);
-
-  const handleLeftClick = useCallback(() => {
-    const lastItem = cards.pop();
-
-    if (lastItem) {
-      cards.unshift(lastItem);
-    }
-
-    setCards([...cards]);
-  }, [cards]);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => handleRightClick(), 5000);
-
-    return () => clearInterval(intervalId);
-  }, [handleRightClick]);
+  const { handleRightClick, handleLeftClick, cards } = useCarousel(dataCard);
 
   return (
     <>
@@ -87,8 +62,8 @@ export function Blogs({ children }: PropsWithChildren) {
         </Buttons>
       </Header>
       <CardsStyled>
-        {cards.map((props, i) => (
-          <Card {...props} key={i} />
+        {cards.map(props => (
+          <Card {...props} key={props.name} />
         ))}
       </CardsStyled>
     </>

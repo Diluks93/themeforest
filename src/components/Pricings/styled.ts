@@ -24,7 +24,8 @@ export const PricingStyled = styled.div`
   &:hover {
     background: ${({ theme }) => theme.colors.primary};
 
-    a {
+    a,
+    button {
       background: ${({ theme }) => theme.colors.white};
       color: ${({ theme }) => theme.colors.primary};
     }

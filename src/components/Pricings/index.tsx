@@ -17,7 +17,7 @@ import {
   CardsStyled,
 } from './styled';
 
-const dataCard = [
+const dataPricings = [
   {
     name: 'Free trial',
     price: '$00',
@@ -94,8 +94,8 @@ export function Pricings({ children }: PropsWithChildren) {
     <>
       <Header>{children}</Header>
       <CardsStyled>
-        {dataCard.map(props => (
-          <Pricing {...props} key={props.name} />
+        {dataPricings.map(pricing => (
+          <Pricing {...pricing} key={pricing.name} />
         ))}
       </CardsStyled>
     </>

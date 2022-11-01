@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Benefit,
+  Benefits,
   Blogs,
   Button,
   ButtonCircle,
@@ -16,7 +16,6 @@ import { Container } from 'styles';
 
 import ensomeTeam from 'static/images/team.webp';
 import mainTeamBackground from 'static/images/main-team.webp';
-import { Analytic, ArrowLeft, ArrowRight, Brain, Key, Upper } from 'static';
 
 import {
   Title,
@@ -27,7 +26,6 @@ import {
   StyledLink,
   BlockTitle,
   Background,
-  Benefits,
 } from './styled';
 
 export default function HomePage() {
@@ -116,32 +114,7 @@ export default function HomePage() {
               dicta sunt explicabo.
             </Description>
           </Wrapper>
-          <Benefits>
-            <Benefit
-              title="Machine learning"
-              description="At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo."
-            >
-              <Brain />
-            </Benefit>
-            <Benefit
-              title="Embed analytics"
-              description="At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo."
-            >
-              <Upper />
-            </Benefit>
-            <Benefit
-              title="Access control"
-              description="At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo."
-            >
-              <Key />
-            </Benefit>
-            <Benefit
-              title="Data analytics"
-              description="At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo."
-            >
-              <Analytic />
-            </Benefit>
-          </Benefits>
+          <Benefits />
         </Container>
       </Section>
       <Section height={614}>
@@ -163,18 +136,6 @@ export default function HomePage() {
           <Blogs>
             <BlockTitle>Our Blog</BlockTitle>
           </Blogs>
-        </Container>
-      </Section>
-      <Section odd height={426}>
-        <Container>
-          <SubTitle $full>Do you need help?</SubTitle>
-          <Description $help>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam
-            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.
-          </Description>
-          <Button>
-            <StyledLink to={PathsToPage.CONTACTS}>Contact Us</StyledLink>
-          </Button>
         </Container>
       </Section>
     </>

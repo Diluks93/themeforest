@@ -46,7 +46,9 @@ export const Mark = styled.mark`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-export const Description = styled.p<{ $unique?: boolean; $help?: boolean }>`
+export const Description = styled.p<{
+  $unique?: boolean;
+}>`
   position: relative;
 
   font-family: 'Open Sans';
@@ -64,14 +66,6 @@ export const Description = styled.p<{ $unique?: boolean; $help?: boolean }>`
       : css`
           width: 100%;
         `}
-
-  ${({ $help }) =>
-    $help
-      ? css`
-          width: 540px;
-          text-align: center;
-        `
-      : css``}
 `;
 
 export const Wrapper = styled.div<{
@@ -134,19 +128,4 @@ export const Background = styled.div<{ $background: string }>`
           background-size: cover;
         `
       : css``}
-`;
-
-export const Benefits = styled.div`
-  width: 540px;
-  height: 586px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 30px;
-  align-content: center;
-
-  & div:nth-child(3) {
-    margin-top: 60px;
-  }
 `;

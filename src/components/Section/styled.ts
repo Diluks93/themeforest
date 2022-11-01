@@ -6,6 +6,7 @@ export const SectionStyled = styled.section<{
   $height?: number;
   $full?: boolean;
   $col?: boolean;
+  $primary?: boolean;
 }>`
   font-family: 'Manrope';
   font-style: normal;
@@ -30,6 +31,13 @@ export const SectionStyled = styled.section<{
       : css`
           background-color: ${theme.colors.white};
         `}
+
+  ${({ $primary, theme }) =>
+    $primary
+      ? css`
+          background-color: ${theme.colors.primary};
+        `
+      : css``}
 
   ${({ $background }) =>
     $background

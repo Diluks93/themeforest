@@ -12,9 +12,11 @@ function SectionWithoutMemo({
   height,
   full,
   col,
+  primary,
 }: PropsWithChildren<{
   odd?: boolean;
   full?: boolean;
+  primary?: boolean;
   col?: boolean;
   id?: string;
   background?: string;
@@ -27,6 +29,7 @@ function SectionWithoutMemo({
       ref={ref}
       id={id}
       $odd={odd}
+      $primary={primary}
       $background={background}
       $height={height}
       $full={full}

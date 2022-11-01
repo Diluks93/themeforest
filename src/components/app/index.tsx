@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { Header, Footer } from 'components';
+import { Header, HelperSection, SubscriberSection, Footer } from 'components';
 import { PathsToPage } from 'constants/';
 import { darkTheme, lightTheme } from 'styles';
 
@@ -42,7 +42,9 @@ export function App() {
           }
         />
       </Routes>
+      <HelperSection />
       <ThemeProvider theme={invertTheme}>
+        <SubscriberSection />
         <Footer />
       </ThemeProvider>
     </Suspense>

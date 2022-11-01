@@ -40,3 +40,18 @@ export const Description = styled.p`
 
   color: ${({ theme }) => theme.colors.grey};
 `;
+
+export const BenefitsStyled = styled.div`
+  width: 540px;
+  height: 586px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-content: center;
+
+  & div:nth-child(3) {
+    margin-top: 60px;
+  }
+`;
