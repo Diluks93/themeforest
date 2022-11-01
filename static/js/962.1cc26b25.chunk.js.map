@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/962.1cc26b25.chunk.js","mappings":"iLAEe,SAASA,IACtB,OAAO,mDACT,C","sources":["pages/Services/index.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function ServicesPage() {\r\n  return <main>Services page working</main>;\r\n}\r\n"],"names":["ServicesPage"],"sourceRoot":""}

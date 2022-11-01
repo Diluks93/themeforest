@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[962],{4962:function(e,n,r){r.r(n),r.d(n,{default:function(){return u}});r(2791);var t=r(184);function u(){return(0,t.jsx)("main",{children:"Services page working"})}}}]);
-//# sourceMappingURL=962.1cc26b25.chunk.js.map
