@@ -39,6 +39,7 @@ export const Container = styled.div<{
   $flex?: boolean;
   $unique?: boolean;
   $row?: boolean;
+  $align?: boolean;
 }>`
   max-width: ${({ theme }) => theme.sizes.container.width[4]}px;
   width: 100%;
@@ -70,6 +71,13 @@ export const Container = styled.div<{
           gap: 30px;
           flex-wrap: wrap;
           flex-direction: row;
+        `
+      : css``}
+
+  ${({ $align }) =>
+    $align
+      ? css`
+          align-items: flex-start;
         `
       : css``}
 

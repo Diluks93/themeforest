@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
 import { Header, HelperSection, SubscriberSection, Footer } from 'components';
@@ -17,6 +17,7 @@ const FAQPage = lazy(() => import('pages/FAQ'));
 const ServicesPage = lazy(() => import('pages/Services'));
 
 export function App() {
+  const { pathname } = useLocation();
   const invertTheme = (baseTheme: DefaultTheme) =>
     baseTheme.type !== 'light' ? lightTheme : darkTheme;
 
@@ -42,7 +43,7 @@ export function App() {
           }
         />
       </Routes>
-      <HelperSection />
+      {pathname !== '/contacts' ? <HelperSection /> : null}
       <ThemeProvider theme={invertTheme}>
         <SubscriberSection />
         <Footer />

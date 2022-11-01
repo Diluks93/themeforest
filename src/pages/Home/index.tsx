@@ -43,7 +43,7 @@ export default function HomePage() {
           </Description>
         </Container>
       </Section>
-      <Section odd background={mainTeamBackground} full></Section>
+      <Section odd background={mainTeamBackground} full />
       <Section height={464}>
         <Container $flex>
           <SubTitle>

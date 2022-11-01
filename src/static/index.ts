@@ -33,6 +33,9 @@ import { ReactComponent as BigAnalytic } from './icons/service_analytic.svg';
 import { ReactComponent as Checkmark } from './icons/icon_checkmark.svg';
 import { ReactComponent as BigData } from './icons/service_data.svg';
 import { ReactComponent as BigIntelligence } from './icons/service_intelligence.svg';
+import { ReactComponent as Call } from './icons/icon_call.svg';
+import { ReactComponent as Location } from './icons/icon_location.svg';
+import { ReactComponent as Mail } from './icons/icon_mail.svg';
 
 export {
   LogoBlue,
@@ -68,4 +71,7 @@ export {
   Checkmark,
   BigData,
   BigIntelligence,
+  Call,
+  Location,
+  Mail,
 };
