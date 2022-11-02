@@ -8,6 +8,7 @@ export const enum PathsToPage {
   TEAM = '/team',
   FAQ = '/faq',
   SERVICES = '/services',
+  SERVICE = ':serviceId',
   MAP = '/map',
   PRICING = '/pricing',
 }

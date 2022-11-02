@@ -60,5 +60,7 @@ export const Labeling = styled.span`
   justify-content: space-between;
   gap: 12px;
   color: ${({ theme }) => theme.colors.black};
-  fill: ${({ theme }) => theme.colors.black};
+  svg {
+    fill: ${({ theme }) => theme.colors.black};
+  }
 `;

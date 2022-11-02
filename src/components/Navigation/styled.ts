@@ -18,6 +18,8 @@ export const ListItemStyled = styled(NavLink)<{ order: number }>`
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.grey};
   order: ${({ order }) => (order === 2 ? '4' : order + 1)};
+  width: 70px;
+  letter-spacing: -0.015em;
 
   &:hover {
     color: ${({ theme }) => theme.colors.hover};
@@ -39,7 +41,9 @@ export const QuickLink = styled.span<{ isOpen: boolean }>`
   justify-content: space-between;
   align-items: flex-end;
   column-gap: 3px;
+  width: 70px;
   cursor: pointer;
+  letter-spacing: -0.015em;
 
   #small_chevron {
     rotate: ${({ isOpen }) => (isOpen ? '180deg' : '0')};

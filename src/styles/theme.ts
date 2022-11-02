@@ -31,7 +31,7 @@ export const baseTheme = {
       height: 44,
     },
     navigation: {
-      width: 511,
+      width: 520,
     },
     header: {
       height: 126,

@@ -8,11 +8,12 @@ import { CardStyled, Title, Description, StyledLink } from './styled';
 export function CardService({
   title,
   icon,
+  id,
 }: {
   title: string;
   icon: JSX.Element;
+  id: string;
 }) {
-  // TODO SERVICE - ID
   return (
     <CardStyled>
       {icon}
@@ -22,7 +23,7 @@ export function CardService({
         blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
         et quas. Quis autem vel eum iure
       </Description>
-      <StyledLink to={PathsToPage.SERVICES}>
+      <StyledLink to={`${PathsToPage.SERVICES}/${id}`}>
         Read more
         <ArrowRight />
       </StyledLink>

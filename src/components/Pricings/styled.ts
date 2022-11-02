@@ -32,7 +32,7 @@ export const PricingStyled = styled.div`
 
     h4,
     span,
-    ul {
+    li {
       color: ${({ theme }) => theme.colors.white};
     }
 
@@ -159,6 +159,8 @@ export const Service = styled.li`
   align-items: center;
   padding: 0px;
   gap: 7px;
+
+  color: ${({ theme }) => theme.colors.black};
 
   svg {
     fill: ${({ theme }) => theme.colors.primary};

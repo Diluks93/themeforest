@@ -20,7 +20,7 @@ export const FieldStyled = styled.input<{
   font-size: 14px;
 
   letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.hover};
 
   &::placeholder {
     font-family: 'Open Sans';
@@ -29,7 +29,7 @@ export const FieldStyled = styled.input<{
     font-size: 14px;
 
     letter-spacing: -0.015em;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.hover};
   }
 
   &:hover,
@@ -68,4 +68,5 @@ export const FieldsetStyled = styled.fieldset`
 
 export const Error = styled.span`
   font-size: small;
+  color: ${({ theme }) => theme.colors.black};
 `;

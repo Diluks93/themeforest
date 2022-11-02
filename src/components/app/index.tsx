@@ -15,6 +15,7 @@ const AboutUsPage = lazy(() => import('pages/AboutUs'));
 const TeamPage = lazy(() => import('pages/Team'));
 const FAQPage = lazy(() => import('pages/FAQ'));
 const ServicesPage = lazy(() => import('pages/Services'));
+const ServicePage = lazy(() => import('pages/Service'));
 
 export function App() {
   const { pathname } = useLocation();
@@ -44,7 +45,10 @@ export function App() {
         <Route path={PathsToPage.ABOUT_US} element={<AboutUsPage />} />
         <Route path={PathsToPage.TEAM} element={<TeamPage />} />
         <Route path={PathsToPage.FAQ} element={<FAQPage />} />
-        <Route path={PathsToPage.SERVICES} element={<ServicesPage />} />
+        <Route path={PathsToPage.SERVICES}>
+          <Route index element={<ServicesPage />} />
+          <Route path={PathsToPage.SERVICE} element={<ServicePage />} />
+        </Route>
         <Route
           path="*"
           element={
