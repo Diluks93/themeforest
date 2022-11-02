@@ -25,6 +25,7 @@ export function App() {
     switch (pathname) {
       case '/contacts':
       case '/team':
+      case '/about':
         return false;
       default:
         return true;

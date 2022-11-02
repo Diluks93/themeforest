@@ -16,6 +16,7 @@ export const Number = styled.span`
   display: flex;
   align-items: center;
   letter-spacing: -0.025em;
+  justify-content: center;
 
   color: ${({ theme }) => theme.colors.primary};
 
