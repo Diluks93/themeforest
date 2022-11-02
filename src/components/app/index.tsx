@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useCallback } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
@@ -20,6 +20,16 @@ export function App() {
   const { pathname } = useLocation();
   const invertTheme = (baseTheme: DefaultTheme) =>
     baseTheme.type !== 'light' ? lightTheme : darkTheme;
+
+  const shouldRenderHelperSection = useCallback(() => {
+    switch (pathname) {
+      case '/contacts':
+      case '/team':
+        return false;
+      default:
+        return true;
+    }
+  }, [pathname]);
 
   return (
     <Suspense fallback="Loading...">
@@ -43,7 +53,7 @@ export function App() {
           }
         />
       </Routes>
-      {pathname !== '/contacts' ? <HelperSection /> : null}
+      {shouldRenderHelperSection() ? <HelperSection /> : null}
       <ThemeProvider theme={invertTheme}>
         <SubscriberSection />
         <Footer />

@@ -26,6 +26,7 @@ export const UnorderedList = styled.ul`
   filter: drop-shadow(0px 2px 6px rgba(0, 43, 78, 0.15))
     drop-shadow(0px 1px 2px rgba(0, 43, 78, 0.3));
   border-radius: 6px;
+  z-index: 9999;
 
   @media ${({ theme }) => theme.media.mobile} {
     width: 80%;
