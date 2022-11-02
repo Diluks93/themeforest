@@ -45,7 +45,7 @@ function FormWithoutMemo({
       />
       <Field
         text="Your message"
-        fieldType="text"
+        fieldType="textarea"
         fieldName="message"
         fieldValue={values.message}
         hasError={errors.message}

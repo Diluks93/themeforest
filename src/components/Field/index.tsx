@@ -1,6 +1,6 @@
 import React, { ChangeEvent, memo, useCallback } from 'react';
 
-import { FieldStyled, FieldsetStyled } from './styled';
+import { FieldStyled, FieldsetStyled, Error } from './styled';
 
 type KindOfField = 'text' | 'email' | 'textarea';
 
@@ -28,7 +28,6 @@ function FieldWithoutMemo({
 
   return (
     <FieldsetStyled>
-      <label htmlFor={fieldName} />
       <FieldStyled
         type={fieldType}
         name={fieldName}
@@ -36,9 +35,11 @@ function FieldWithoutMemo({
         onChange={handleFieldChange}
         value={fieldValue}
         placeholder={text}
+        $maxHeight={fieldType === 'textarea'}
+        $error={hasError}
       />
       {hasError && (
-        <span>{`Please fill in correct value for "${fieldName}".`}</span>
+        <Error>{`Please fill in correct value for "${fieldName}".`}</Error>
       )}
     </FieldsetStyled>
   );

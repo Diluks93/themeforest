@@ -30,6 +30,13 @@ function ContactFormWithoutMemo() {
       ...prev,
       [fieldName]: value,
     }));
+
+    setErrors({
+      email: false,
+      name: false,
+      theme: false,
+      message: false,
+    });
   }, []);
 
   const onSubmit = useCallback(
