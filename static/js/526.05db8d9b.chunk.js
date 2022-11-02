@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[526],{3526:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});t(2791);var r=t(184);function u(){return(0,r.jsx)("main",{children:"Team page working"})}}}]);
-//# sourceMappingURL=526.05db8d9b.chunk.js.map

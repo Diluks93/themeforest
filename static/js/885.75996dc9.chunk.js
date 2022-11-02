@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[885],{2885:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});t(2791);var r=t(184);function u(){return(0,r.jsx)("main",{children:"About Us page working"})}}}]);
-//# sourceMappingURL=885.75996dc9.chunk.js.map
