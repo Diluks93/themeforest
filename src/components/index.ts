@@ -34,3 +34,4 @@ export { CardService } from './CardService';
 export { Field } from './Field';
 export { Form } from './Form';
 export { ContactForm } from './ContactForm';
+export { Tab } from './Tab';

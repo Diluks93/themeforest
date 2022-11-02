@@ -32,7 +32,7 @@ export default function ServicesPage() {
       <Section height={400} id="services">
         <Container>
           <BreadCrumb left />
-          <MainTitle />
+          <MainTitle subtitle="Services" title="Data Analytics Services" />
         </Container>
       </Section>
       <Section>

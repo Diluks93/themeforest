@@ -36,6 +36,8 @@ import { ReactComponent as BigIntelligence } from './icons/service_intelligence.
 import { ReactComponent as Call } from './icons/icon_call.svg';
 import { ReactComponent as Location } from './icons/icon_location.svg';
 import { ReactComponent as Mail } from './icons/icon_mail.svg';
+import { ReactComponent as Plus } from './icons/icon_plus.svg';
+import { ReactComponent as Minus } from './icons/icon_minus.svg';
 
 export {
   LogoBlue,
@@ -74,4 +76,6 @@ export {
   Call,
   Location,
   Mail,
+  Plus,
+  Minus,
 };
