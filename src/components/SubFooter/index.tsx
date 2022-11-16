@@ -1,10 +1,8 @@
-import React, { memo, useMemo } from 'react';
+import React from 'react';
 
 import { Wrapper, SpanStyled, Ending } from './styled';
 
-function SubFooterWithoutMemo() {
-  const year = useMemo(() => new Date().getFullYear(), []);
-
+export function SubFooter() {
   return (
     <>
       <Wrapper>
@@ -12,11 +10,9 @@ function SubFooterWithoutMemo() {
         <SpanStyled>Term of us</SpanStyled>
       </Wrapper>
       <Ending>
-        ©<data>{year}</data>
+        ©<data>2022</data>
         <span>Ensome. All Rights Reserved.</span>
       </Ending>
     </>
   );
 }
-
-export const SubFooter = memo(SubFooterWithoutMemo);

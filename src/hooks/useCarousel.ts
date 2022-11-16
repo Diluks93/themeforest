@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export function useCarousel<T>(items: T[]) {
   const [cards, setCards] = useState(items);
@@ -22,12 +22,6 @@ export function useCarousel<T>(items: T[]) {
 
     setCards([...cards]);
   }, [cards]);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => handleRightClick(), 5000);
-
-    return () => clearInterval(intervalId);
-  }, [handleRightClick]);
 
   return {
     handleRightClick,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const CardStyled = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ export const Title = styled.h3`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-size: 22px;
+  font-size: ${({ theme }) => theme.fonts.sizes[4]}px;
   line-height: 33px;
 
   letter-spacing: -0.015em;
@@ -32,7 +32,7 @@ export const Description = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 28px;
 
   letter-spacing: -0.015em;
@@ -40,11 +40,11 @@ export const Description = styled.p`
   color: ${({ theme }) => theme.colors.grey};
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   text-decoration: none;
   line-height: 24px;
 

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { pathArrowRight } from 'static';
 
@@ -9,17 +9,21 @@ export const Wrapper = styled.div`
 `;
 
 export const SpanStyled = styled.span`
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: ${({ theme }) => theme.colors.grey};
+  font-weight: ${({ theme }) => theme.fonts.weights[2]};
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[0]}em;
+  color: ${({ theme }) => theme.colors.footer};
   display: flex;
-  column-gap: 3px;
+  column-gap: ${({ theme }) => theme.gaps[0]}px;
   justify-content: space-between;
   align-items: center;
 
   &::after {
-    content: '';
+    ${({ theme }) =>
+      theme.type === 'light'
+        ? css``
+        : css`
+            content: '';
+          `};
     background-image: url(${pathArrowRight});
     width: 20px;
     height: 20px;
@@ -30,12 +34,11 @@ export const SpanStyled = styled.span`
 
 export const Ending = styled.div`
   display: flex;
-  column-gap: 3px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.grey};
+  column-gap: ${({ theme }) => theme.gaps[0]}px;
+  font-family: ${({ theme }) => theme.fonts.families[1]};
+  font-weight: ${({ theme }) => theme.fonts.weights[0]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
+  color: ${({ theme }) => theme.colors.footer};
 `;

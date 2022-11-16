@@ -4,7 +4,7 @@ export const Title = styled.h2`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: ${({ theme }) => theme.fonts.sizes[7]}px;
   line-height: 60px;
 
   text-align: center;

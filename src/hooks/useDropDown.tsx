@@ -11,10 +11,10 @@ import { Dropdown } from 'components';
 import { PathsToPage } from 'constants/';
 
 export const useDropdown = () => {
-  const containerRef = useRef<HTMLDivElement | HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLUListElement | HTMLButtonElement>(null);
   const [isOpen, setOpen] = useState(false);
   const [element, setElement] = useState<
-    HTMLDivElement | HTMLButtonElement | null
+    HTMLUListElement | HTMLButtonElement | null
   >(null);
 
   useLayoutEffect(() => {

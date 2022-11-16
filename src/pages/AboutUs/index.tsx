@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
   BreadCrumb,
-  Cards,
+  // Cards,
   ContactForm,
   Customers,
   Section,
@@ -92,9 +92,9 @@ export default function AboutUsPage() {
             </Description>
           </Wrapper>
           <Customers />
-          <Cards>
+          {/* <Cards>
             <SubTitle>What our customers say</SubTitle>
-          </Cards>
+          </Cards> */}
         </Container>
       </Section>
       <Section height={833} odd>

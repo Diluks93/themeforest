@@ -15,7 +15,7 @@ function ColumnFooterWithoutRef(
     children: ReactNode;
     startOrder: number;
   },
-  forwardedRef?: ForwardedRef<HTMLDivElement>
+  forwardedRef?: ForwardedRef<HTMLUListElement>
 ) {
   const getNamePath = useNamePath;
 

@@ -5,7 +5,7 @@ export const NavigationStyled = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: ${({ theme }) => theme.gaps[2]}px;
+  column-gap: ${({ theme }) => theme.gaps[9]}px;
   width: ${({ theme }) => theme.sizes.navigation.width}px;
 
   @media ${({ theme }) => theme.media.mobile} {
@@ -14,11 +14,10 @@ export const NavigationStyled = styled.nav`
 `;
 
 export const ListItemStyled = styled(NavLink)<{ order: number }>`
-  text-decoration: none;
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.grey};
   order: ${({ order }) => (order === 2 ? '4' : order + 1)};
-  width: 70px;
+  width: ${({ theme }) => theme.sizes.navigation.itemWidth}px;
   letter-spacing: -0.015em;
 
   &:hover {
@@ -34,14 +33,14 @@ export const ListItemStyled = styled(NavLink)<{ order: number }>`
   }
 `;
 
-export const QuickLink = styled.span<{ isOpen: boolean }>`
+export const QuickLink = styled.span<{ isOpen: boolean; $grey?: boolean }>`
   color: ${({ theme }) => theme.colors.grey};
   fill: ${({ theme }) => theme.colors.grey};
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  column-gap: 3px;
-  width: 70px;
+  column-gap: ${({ theme }) => theme.gaps[0]}px;
+  width: ${({ theme }) => theme.sizes.navigation.itemWidth}px;
   cursor: pointer;
   letter-spacing: -0.015em;
 
@@ -55,14 +54,23 @@ export const QuickLink = styled.span<{ isOpen: boolean }>`
     font-weight: 500;
   }
 
-  ${({ isOpen }) =>
-    isOpen
-      ? css`
+  ${({ $grey, isOpen, theme }) => {
+    switch (true) {
+      case isOpen:
+        return css`
           font-weight: 500;
-          color: ${({ theme }) => theme.colors.black};
-          fill: ${({ theme }) => theme.colors.grey};
-          border-bottom: ${({ theme }) =>
-            theme.type === 'dark' ? `1px solid ${theme.colors.black}` : 'none'};
-        `
-      : ''};
+          color: ${theme.colors.black};
+          fill: ${theme.colors.grey};
+          border-bottom: ${theme.type === 'dark'
+            ? `1px solid ${theme.colors.black}`
+            : 'none'};
+        `;
+      case $grey:
+        return css`
+          color: ${theme.colors.footer};
+        `;
+      default:
+        return css``;
+    }
+  }}
 `;

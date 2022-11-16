@@ -1,15 +1,12 @@
-import React, { memo, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 import { Facebook, Twitter, LinkedIn, YouTube, Dribble, Behance } from 'static';
 
 import { SocialStyled, SocialLinks } from './styled';
 
-function SocialWithoutMemo({
+export function Social({
   children,
-}: {
-  children: ReactNode;
-  $visible?: boolean;
-}) {
+}: PropsWithChildren<{ $visible?: boolean }>) {
   return (
     <SocialStyled>
       {children}
@@ -24,5 +21,3 @@ function SocialWithoutMemo({
     </SocialStyled>
   );
 }
-
-export const Social = memo(SocialWithoutMemo);

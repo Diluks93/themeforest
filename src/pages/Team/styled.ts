@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h2`
-  font-size: 46px;
+  font-size: ${({ theme }) => theme.fonts.sizes[7]}px;
   line-height: 60px;
   letter-spacing: -0.015em;
   color: ${({ theme }) => theme.colors.black};
@@ -15,7 +15,7 @@ export const Description = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: 24px;
 
   letter-spacing: -0.015em;

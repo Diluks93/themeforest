@@ -13,6 +13,7 @@
 
 #setting
 .vscode
+.pixelPerfect
 
 # misc
 .DS_Store

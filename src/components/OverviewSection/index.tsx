@@ -1,30 +1,32 @@
 import React from 'react';
 
-import { Section, Customers, Statistic } from 'components';
-import { Container } from 'styles';
+import { Customers, Statistic } from 'components';
+import { BlockTitle } from 'styles';
+import { description, statistics } from 'constants/';
 
-import { SubTitle, Wrapper, Description } from './styled';
+import { Wrapper, Section, DescriptionStyled, ContainerStyled } from './styled';
+
+function Statistics() {
+  return (
+    <Wrapper>
+      {statistics.map(statistic => (
+        <Statistic key={statistic.id} {...statistic} />
+      ))}
+    </Wrapper>
+  );
+}
 
 export function OverviewSection() {
   return (
-    <Section col height={620}>
-      <SubTitle>We provide services that guarantee your success</SubTitle>
-      <Container>
+    <Section $col>
+      <BlockTitle>We provide services that guarantee your success</BlockTitle>
+      <ContainerStyled>
         <Wrapper $row>
-          <Wrapper $col>
-            <Statistic number="1830+" description="Project executed" />
-            <Statistic number="834+" description="Satisfied customers" />
-            <Statistic number="390" description="Data management" />
-          </Wrapper>
-          <Description>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptat
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quaeab illo inventore. Donec tincidunt tempor quam, non mollis
-            finibus nec.
-          </Description>
+          <Statistics />
+          <DescriptionStyled children={description} />
         </Wrapper>
         <Customers />
-      </Container>
+      </ContainerStyled>
     </Section>
   );
 }

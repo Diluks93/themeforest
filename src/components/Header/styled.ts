@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
+import { ButtonStyled } from 'components/Button/styled';
+
 export const HeaderStyled = styled.header`
   height: ${({ theme }) => theme.sizes.header.height}px;
   background-color: ${({ theme }) => theme.colors.background};
-  font-family: 'Manrope';
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[2]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,5 +37,14 @@ export const HeaderStyled = styled.header`
       display: inline-block;
       fill: ${({ theme }) => theme.colors.primary};
     }
+  }
+`;
+
+export const ButtonHeader = styled(ButtonStyled)`
+  width: ${({ theme }) => theme.sizes.button.width[3]}px;
+  height: ${({ theme }) => theme.sizes.button.height[0]}px;
+
+  svg {
+    transform: scale(1.1);
   }
 `;

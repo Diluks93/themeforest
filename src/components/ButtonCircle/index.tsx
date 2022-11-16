@@ -1,13 +1,7 @@
-import React, { PropsWithChildren } from 'react';
-
-import { PathsToPage } from 'constants/';
-
 import { Button, ButtonCircleStyled, FillButton } from './styled';
+import { ButtonCircleProps } from './props';
 
-export function ButtonCircle({
-  children,
-  path,
-}: PropsWithChildren<{ path: PathsToPage }>) {
+export function ButtonCircle({ children, path }: ButtonCircleProps) {
   return (
     <ButtonCircleStyled>
       <FillButton>

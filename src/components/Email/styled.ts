@@ -16,7 +16,7 @@ export const InputStyled = styled.input<{ $error?: boolean }>`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: 24px;
 
   letter-spacing: -0.015em;
@@ -24,20 +24,20 @@ export const InputStyled = styled.input<{ $error?: boolean }>`
   padding: 15px 25px;
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.black};
+    color: black;
   }
 
   &:hover {
-    background: ${({ theme }) => theme.colors.steel};
-    color: ${({ theme }) => theme.colors.grey};
+    background: #eceff2;
+    color: grey;
     &::placeholder {
-      color: ${({ theme }) => theme.colors.grey};
+      color: grey;
     }
   }
 
   &:focus {
     outline: none;
-    color: ${({ theme }) => theme.colors.black};
+    color: black;
   }
 
   ${({ $error, theme }) =>
@@ -47,8 +47,8 @@ export const InputStyled = styled.input<{ $error?: boolean }>`
           color: ${theme.colors.error};
         `
       : css`
-          color: ${theme.colors.black};
-          background: ${theme.colors.tertiary};
+          color: black;
+          background: ${theme.colors.steel};
         `}
 `;
 
@@ -62,7 +62,7 @@ export const Button = styled.button`
   align-items: center;
   padding: 11px 46px;
 
-  background: ${({ theme }) => theme.colors.black};
+  background: white;
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
   border: none;
@@ -70,11 +70,11 @@ export const Button = styled.button`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 24px;
 
   letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.white};
+  color: black;
 
   &::before {
     content: '';
@@ -85,7 +85,7 @@ export const Button = styled.button`
     width: 6px;
     left: 0px;
     transform: translateX(-50%);
-    background: ${({ theme }) => theme.colors.black};
+    background: white;
   }
 
   &:hover {

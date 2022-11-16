@@ -1,25 +1,28 @@
-import React, { memo } from 'react';
+import React from 'react';
 
-import { Section, EmailField } from 'components';
-import { Container } from 'styles';
+import { EmailField } from 'components';
 
-import { Wrapper, Title, Description } from './styled';
+import {
+  Wrapper,
+  ContainerStyled,
+  Section,
+  BlockTitleStyled,
+  DescriptionStyled,
+} from './styled';
 
-export function SubscriberSectionWithoutMemo() {
+export function SubscriberSection() {
   return (
     <Section>
-      <Container $flex>
+      <ContainerStyled>
         <Wrapper>
-          <Title>Subscribe to our newsletter</Title>
-          <Description>
+          <BlockTitleStyled>Subscribe to our newsletter</BlockTitleStyled>
+          <DescriptionStyled>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque laudantium.
-          </Description>
+          </DescriptionStyled>
         </Wrapper>
         <EmailField />
-      </Container>
+      </ContainerStyled>
     </Section>
   );
 }
-
-export const SubscriberSection = memo(SubscriberSectionWithoutMemo);

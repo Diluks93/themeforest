@@ -1,3 +1,4 @@
+import { ButtonStyled } from 'components/Button/styled';
 import styled from 'styled-components';
 
 export const FormStyled = styled.form`
@@ -14,4 +15,8 @@ export const Wrapper = styled.div`
   width: 100%;
   justify-content: space-between;
   column-gap: 20px;
+`;
+
+export const Button = styled(ButtonStyled)`
+  width: ${({ theme }) => theme.sizes.button.width[1]}px;
 `;

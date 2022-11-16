@@ -4,7 +4,7 @@ export const Title = styled.h2`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: ${({ theme }) => theme.fonts.sizes[7]}px;
   line-height: 60px;
 
   text-align: center;
@@ -55,7 +55,7 @@ export const SubTitle = styled.h3`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: ${({ theme }) => theme.fonts.sizes[7]}px;
   line-height: 60px;
 
   letter-spacing: -0.015em;
@@ -67,7 +67,7 @@ export const Description = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
   line-height: 33px;
   letter-spacing: -0.015em;
 
@@ -92,7 +92,7 @@ const contactsStyles = css`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 28px;
 
   text-align: right;
@@ -123,7 +123,7 @@ export const Labeling = styled.span`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: 24px;
 
   text-align: right;

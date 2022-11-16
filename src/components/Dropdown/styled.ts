@@ -44,6 +44,7 @@ export const ListItemStyled = styled(Link)`
   text-decoration: none;
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.grey};
+  width: 100%;
 
   &:hover {
     color: ${({ theme }) => theme.colors.hover};

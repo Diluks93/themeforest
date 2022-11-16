@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export const ListItemStyled = styled(NavLink)<{ order: number }>`
-  text-decoration: none;
+export const ListItemStyled = styled(Link)<{ order: number }>`
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.footer};
   order: ${({ order }) => (order === 2 ? '4' : order + 1)};
@@ -20,7 +19,7 @@ export const ListItemStyled = styled(NavLink)<{ order: number }>`
   }
 `;
 
-export const Wrapper = styled.div<{ $column?: boolean }>`
+export const Wrapper = styled.ul<{ $column?: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -30,7 +29,7 @@ export const Wrapper = styled.div<{ $column?: boolean }>`
     $column
       ? css`
           flex-direction: column;
-          row-gap: ${({ theme }) => theme.gaps[0]}px;
+          row-gap: ${({ theme }) => theme.gaps[4]}px;
         `
       : css``}
 `;

@@ -10,7 +10,7 @@ interface DropDownProps {
   isOpen: boolean;
   trigger: ReactNode;
   menu: PathsToPage[];
-  element: HTMLDivElement | HTMLButtonElement;
+  element: HTMLUListElement | HTMLButtonElement;
   toggle: () => void;
 }
 

@@ -1,7 +1,8 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 
+import { ButtonProps } from './props';
 import { ButtonStyled } from './styled';
 
-export const Button: FC<{ children: ReactNode }> = ({ children }) => {
+export const Button: FC<ButtonProps> = ({ children }) => {
   return <ButtonStyled>{children}</ButtonStyled>;
 };

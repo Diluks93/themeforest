@@ -14,7 +14,6 @@ export const SectionStyled = styled.section<{
   text-align: left;
 
   height: fit-content;
-  min-height: 266px;
   width: 100%;
 
   display: flex;

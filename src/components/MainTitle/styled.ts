@@ -4,7 +4,7 @@ export const SubTitle = styled.h6`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 24px;
 
   text-align: center;
@@ -17,7 +17,7 @@ export const Title = styled.h2`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-size: 46px;
+  font-size: ${({ theme }) => theme.fonts.sizes[6]}px;
   line-height: 60px;
 
   text-align: center;
@@ -30,7 +30,7 @@ export const Description = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
   line-height: 33px;
 
   text-align: center;

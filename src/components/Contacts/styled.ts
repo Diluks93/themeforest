@@ -25,39 +25,14 @@ export const Wrapper = styled.div<{ $col?: boolean; $reverse?: boolean }>`
       : css`
           width: 100%;
         `}
-
-  ${({ theme }) =>
-    theme.type === 'dark'
-      ? css`
-          flex-direction: column;
-        `
-      : css``}
-
-  ${({ theme, $reverse }) =>
-    theme.type === 'dark' && $reverse
-      ? css`
-          flex-direction: column-reverse;
-        `
-      : css``}
-`;
-
-const contactsStyles = css`
-  text-decoration: none;
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.black};
 `;
 
 const linkStyles = css`
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.black};
+  font-weight: ${({ theme }) => theme.fonts.weights[2]};
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
-  column-gap: 3px;
+  column-gap: ${({ theme }) => theme.gaps[0]}px;
   justify-content: space-between;
   align-items: center;
 
@@ -71,26 +46,6 @@ const linkStyles = css`
   }
 `;
 
-export const Phone = styled.a`
-  ${contactsStyles}
-`;
-
-export const Email = styled.a`
+export const LinkStyled = styled(Link)`
   ${linkStyles}
-`;
-
-export const LinkStyled = styled(Link)<{ $visible?: boolean }>`
-  ${linkStyles}
-
-  ${({ $visible, theme }) =>
-    $visible && theme.type === 'dark'
-      ? css`
-          display: none;
-        `
-      : css``}
-`;
-
-export const Address = styled.address`
-  ${contactsStyles}
-  font-style: normal;
 `;

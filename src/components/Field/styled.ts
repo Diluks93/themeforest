@@ -17,7 +17,7 @@ export const FieldStyled = styled.input<{
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
 
   letter-spacing: -0.015em;
   color: ${({ theme }) => theme.colors.hover};
@@ -26,7 +26,7 @@ export const FieldStyled = styled.input<{
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
 
     letter-spacing: -0.015em;
     color: ${({ theme }) => theme.colors.hover};

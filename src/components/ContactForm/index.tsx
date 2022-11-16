@@ -1,4 +1,4 @@
-import React, { memo, MouseEvent, useCallback, useState } from 'react';
+import React, { MouseEvent, useCallback, useState } from 'react';
 import { object, string } from 'yup';
 
 import { Form } from 'components';
@@ -10,7 +10,7 @@ const contactFormSchema = object().shape({
   message: string().max(160).required(),
 });
 
-function ContactFormWithoutMemo() {
+export function ContactForm() {
   const [values, setValues] = useState({
     email: '',
     name: '',
@@ -56,8 +56,7 @@ function ContactFormWithoutMemo() {
                 ...acc,
                 [error.path]: true,
               };
-            },
-            {}
+            }
           );
 
           setErrors(errors);
@@ -76,5 +75,3 @@ function ContactFormWithoutMemo() {
     />
   );
 }
-
-export const ContactForm = memo(ContactFormWithoutMemo);

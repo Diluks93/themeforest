@@ -1,10 +1,10 @@
-import React, { memo, MouseEvent } from 'react';
+import React, { MouseEvent } from 'react';
 
-import { Field, Button } from 'components';
+import { Field } from 'components';
 
-import { FormStyled, Wrapper } from './styled';
+import { FormStyled, Wrapper, Button } from './styled';
 
-function FormWithoutMemo({
+export function Form({
   onSubmit,
   onFieldChange,
   values,
@@ -55,5 +55,3 @@ function FormWithoutMemo({
     </FormStyled>
   );
 }
-
-export const Form = memo(FormWithoutMemo);

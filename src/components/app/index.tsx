@@ -1,10 +1,15 @@
-import React, { lazy, Suspense, useCallback } from 'react';
+import React, { lazy, Suspense, useMemo } from 'react';
+import { useTheme } from 'styled-components';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { Header, HelperSection, SubscriberSection, Footer } from 'components';
+import {
+  Header,
+  HelperSection,
+  SubscriberSection,
+  FooterLight,
+  FooterDark,
+} from 'components';
 import { PathsToPage } from 'constants/';
-import { darkTheme, lightTheme } from 'styles';
 
 const HomePage = lazy(() => import('pages/Home'));
 const SolutionsPage = lazy(() => import('pages/Solutions'));
@@ -19,17 +24,16 @@ const ServicePage = lazy(() => import('pages/Service'));
 
 export function App() {
   const { pathname } = useLocation();
-  const invertTheme = (baseTheme: DefaultTheme) =>
-    baseTheme.type !== 'light' ? lightTheme : darkTheme;
+  const { type } = useTheme();
 
-  const shouldRenderHelperSection = useCallback(() => {
+  const shouldRenderHelperSection = useMemo(() => {
     switch (pathname) {
-      case '/contacts':
-      case '/team':
-      case '/about':
-        return false;
+      case PathsToPage.CONTACTS:
+      case PathsToPage.TEAM:
+      case PathsToPage.ABOUT_US:
+        return null;
       default:
-        return true;
+        return <HelperSection />;
     }
   }, [pathname]);
 
@@ -58,11 +62,9 @@ export function App() {
           }
         />
       </Routes>
-      {shouldRenderHelperSection() ? <HelperSection /> : null}
-      <ThemeProvider theme={invertTheme}>
-        <SubscriberSection />
-        <Footer />
-      </ThemeProvider>
+      {shouldRenderHelperSection}
+      <SubscriberSection />
+      {type === 'light' ? <FooterDark /> : <FooterLight />}
     </Suspense>
   );
 }

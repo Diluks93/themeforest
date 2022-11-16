@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const flex = css`
   display: flex;
@@ -17,12 +17,12 @@ const size = css`
 export const ButtonCircleStyled = styled.span`
   ${flex};
   position: absolute;
-  left: 0;
-  bottom: -70%;
+  left: -10px;
+  bottom: -75%;
   transform: translateY(50%);
   background-color: ${({ theme }) => theme.colors.white};
-  width: 140px;
-  height: 140px;
+  width: ${({ theme }) => theme.sizes.button.width[2]}px;
+  height: ${({ theme }) => theme.sizes.button.width[2]}px;
 `;
 
 export const FillButton = styled.span`
@@ -33,7 +33,7 @@ export const FillButton = styled.span`
 
   &:hover {
     box-shadow: ${({ theme }) =>
-      theme.type === 'light' ? '0px 12px 30px rgba(24, 92, 255, 0.18)' : ''};
+      theme.type === 'light' ? theme.shadows.button : ''};
     color: ${({ theme }) => theme.colors.hoverButton};
     fill: ${({ theme }) => theme.colors.hoverButton};
     opacity: ${({ theme }) => (theme.type === 'light' ? '0.8' : '')};
@@ -50,14 +50,13 @@ export const FillButton = styled.span`
   }
 `;
 
-export const Button = styled(NavLink)`
+export const Button = styled(Link)`
   border: 1px ${({ theme }) => theme.colors.white} solid;
   background-color: transparent;
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[1]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   color: ${({ theme }) => theme.colors.white};
-  text-decoration: none;
 
   ${size};
   ${flex};

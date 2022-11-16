@@ -2,26 +2,26 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div<{ $left?: boolean }>`
   display: flex;
-  justify-content: center;
   width: 100%;
-  column-gap: 9px;
+  column-gap: ${({ theme }) => theme.gaps[2]}px;
 
   ${({ $left }) =>
     $left
       ? css`
           justify-content: left;
         `
-      : css``}
+      : css`
+          justify-content: center;
+        `}
 `;
 
 const styles = css`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[1]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
 
-  letter-spacing: -0.01em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[0]}em;
 `;
 
 export const FirstCrumb = styled.span`

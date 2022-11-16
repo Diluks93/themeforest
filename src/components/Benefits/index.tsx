@@ -1,43 +1,25 @@
-import React, { memo, PropsWithChildren } from 'react';
+import React from 'react';
 
-import { Brain, Upper, Key, Analytic } from 'static';
+import { benefits } from 'constants/';
 
-import { Wrapper, Title, Description, BenefitsStyled } from './styled';
+import {
+  Wrapper,
+  BenefitTitle,
+  DescriptionStyled,
+  BenefitsStyled,
+} from './styled';
+import { BenefitProp } from './prop';
 
-const description =
-  'At vero eos et accusamus et iusto odio dignissimos duciu quili blandit praesentium voluptatum ipsa quae ab illo.';
-
-const benefits = [
-  { title: 'Machine learning', description, icon: <Brain /> },
-  { title: 'Embed analytics', description, icon: <Upper /> },
-  { title: 'Access control', description, icon: <Key /> },
-  { title: 'Data analytics', description, icon: <Analytic /> },
-];
-
-function BenefitWithoutMemo({
-  children,
-  title,
-  description: descr,
-}: PropsWithChildren<{ title: string; description: string }>) {
-  return (
-    <Wrapper>
-      {children}
-      <Title>{title}</Title>
-      <Description>{descr}</Description>
-    </Wrapper>
+export function Benefits() {
+  const benefitsComponent = benefits.map(
+    ({ icon, title, description }: BenefitProp) => (
+      <Wrapper key={title}>
+        {icon}
+        <BenefitTitle children={title} />
+        <DescriptionStyled children={description} />
+      </Wrapper>
+    )
   );
+
+  return <BenefitsStyled children={benefitsComponent} />;
 }
-
-const Benefit = memo(BenefitWithoutMemo);
-
-function BenefitsWithoutMemo() {
-  return (
-    <BenefitsStyled>
-      {benefits.map(benefit => (
-        <Benefit {...benefit} children={benefit.icon} key={benefit.title} />
-      ))}
-    </BenefitsStyled>
-  );
-}
-
-export const Benefits = memo(BenefitsWithoutMemo);

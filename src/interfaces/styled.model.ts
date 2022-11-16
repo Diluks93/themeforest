@@ -14,11 +14,13 @@ export interface InterfaceTheme {
     black: string;
     grey: string;
     background: string;
+    backgroundFooter: string;
     error: string;
     white: string;
     hover: string;
     hoverButton: string;
     footer: string;
+    footerColor: string;
   };
 
   sizes: {
@@ -27,20 +29,56 @@ export interface InterfaceTheme {
     };
     container: {
       width: number[];
+      height: number[];
+      paddings: number[];
     };
     button: {
-      width: number;
-      height: number;
+      width: number[];
+      padding: number[];
+      height: number[];
     };
     footer: {
       height: number;
     };
     navigation: {
       width: number;
+      itemWidth: number;
+    };
+    description: {
+      width: number[];
+    };
+    title: {
+      height: number[];
+      width: number[];
+    };
+    benefit: {
+      height: number[];
+      width: number[];
+      padding: number[];
+    };
+    card: {
+      height: number[];
+      width: number[];
+      padding: number[];
     };
   };
 
+  borderRadius: number;
+
+  fonts: {
+    families: string[];
+    weights: number[];
+    sizes: number[];
+    heights: number[];
+    spacings: number[];
+  };
+
   gaps: number[];
+
+  shadows: {
+    button: string;
+    card: string;
+  };
 
   media: {
     extraLarge: string;

@@ -1,31 +1,24 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { Container, Description } from 'styles';
 
-export const SubTitle = styled.h2`
-  font-size: 38px;
-  height: fit-content;
-  line-height: 56px;
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.black};
-  width: 100%;
-  font-weight: 800;
+import { ButtonStyled } from 'components/Button/styled';
+import { SectionStyled } from 'components/Section/styled';
+
+export const Section = styled(SectionStyled)``;
+
+export const ContainerStyled = styled(Container)`
+  width: ${({ theme }) => theme.sizes.container.width[1]}px;
+  row-gap: ${({ theme }) => theme.gaps[8]}px;
+  padding: ${({ theme }) => theme.sizes.container.paddings[3]}px 0;
+`;
+
+export const DescriptionStyled = styled(Description)`
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[1]}px;
   text-align: center;
 `;
 
-export const Description = styled.p`
-  position: relative;
-
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  width: 540px;
-  text-align: center;
-
-  color: ${({ theme }) => theme.colors.grey};
-`;
-
-export const StyledLink = styled(NavLink)`
-  text-decoration: none;
-  color: inherit;
+export const Button = styled(ButtonStyled)`
+  width: ${({ theme }) => theme.sizes.button.width[5]}px;
+  height: ${({ theme }) => theme.sizes.button.height[0]}px;
 `;

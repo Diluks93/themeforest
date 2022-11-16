@@ -1,12 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
-export const Header = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-`;
-
 export const PricingStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,6 +9,7 @@ export const PricingStyled = styled.div`
   gap: 30px;
 
   width: 260px;
+  height: 525px;
 
   background: ${({ theme }) => theme.colors.white};
 
@@ -42,6 +37,13 @@ export const PricingStyled = styled.div`
   }
 `;
 
+export const Column = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: ${({ theme }) => theme.gaps[5]}px;
+`;
+
 export const StyledLink = styled(NavLink)`
   display: flex;
   flex-direction: row;
@@ -57,7 +59,6 @@ export const StyledLink = styled(NavLink)`
   border-radius: 6px;
 
   width: 100%;
-  height: ${({ theme }) => theme.sizes.button.height}px;
 
   &:hover {
     box-shadow: ${({ theme }) =>
@@ -82,7 +83,7 @@ export const Title = styled.h4`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 24px;
 
   letter-spacing: -0.015em;
@@ -103,14 +104,14 @@ export const Price = styled.span`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
-  font-size: 26px;
+  font-size: ${({ theme }) => theme.fonts.sizes[5]}px;
   line-height: 40px;
   letter-spacing: -0.015em;
 
   color: ${({ theme }) => theme.colors.black};
 `;
 
-export const Buttons = styled.div`
+export const Buttons = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -128,6 +129,7 @@ export const Button = styled.button<{ $color?: boolean }>`
   gap: 10px;
 
   width: 41px;
+  height: 32px;
 
   border-radius: 6px;
 
@@ -157,6 +159,7 @@ export const Service = styled.li`
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 14px;
   padding: 0px;
   gap: 7px;
 
@@ -164,6 +167,7 @@ export const Service = styled.li`
 
   svg {
     fill: ${({ theme }) => theme.colors.primary};
+    transform: scale(1.3);
   }
 `;
 

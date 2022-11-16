@@ -1,118 +1,57 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const CardStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+import { CardStyled } from 'components/TestimonialsCard/styled';
+import { Description } from 'styles';
+
+export const BlogStyled = styled(CardStyled)`
   padding: 0px;
-  gap: 20px;
-
-  width: 350px;
-  height: 482px;
-`;
-
-export const Header = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-`;
-
-export const Buttons = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 15px;
-
-  width: 235px;
-  height: 60px;
-`;
-
-export const Button = styled.button`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 15px 40px;
-  gap: 10px;
-
-  width: 110px;
-  height: 60px;
-
-  background: ${({ theme }) => theme.colors.tertiary};
-  border: none;
-  border-radius: 20px;
-
-  svg {
-    fill: ${({ theme }) => theme.colors.grey};
-    width: 30px;
-    height: 30px;
-    filter: grayscale(1);
-  }
-`;
-
-export const CardsStyled = styled.div`
-  display: flex;
-  justify-content: space-between;
-  column-gap: 30px;
+  background-color: transparent;
+  height: fit-content;
+  box-shadow: none;
 `;
 
 export const Title = styled.h4`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 33px;
-
-  letter-spacing: -0.015em;
-
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[3]};
+  font-size: ${({ theme }) => theme.fonts.sizes[4]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[3]}px;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
   color: ${({ theme }) => theme.colors.black};
 `;
 
-export const Description = styled.p`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-
-  letter-spacing: -0.015em;
-
-  color: ${({ theme }) => theme.colors.grey};
+export const DescriptionStyled = styled(Description)`
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[1]}px;
 `;
 
 export const PreviewBlog = styled.img`
-  border-radius: 6px;
+  border-radius: ${({ theme }) => theme.borderRadius}px;
   object-fit: cover;
 `;
 
-export const StyledLink = styled(NavLink)`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  line-height: 24px;
+export const StyledLink = styled(Link)`
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[3]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
 
   display: flex;
   align-items: center;
-  letter-spacing: -0.01em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[0]}em;
 
   color: ${({ theme }) => theme.colors.primary};
 
-  svg {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
+  fill: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Date = styled.time`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-family: ${({ theme }) => theme.fonts.families[1]};
+  font-weight: ${({ theme }) => theme.fonts.weights[0]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
 
-  letter-spacing: -0.015em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
 
   color: ${({ theme }) => theme.colors.grey};
 `;

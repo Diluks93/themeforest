@@ -25,7 +25,7 @@ export const Question = styled.h4<{ $open: boolean }>`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  font-size: 22px;
+  font-size: ${({ theme }) => theme.fonts.sizes[4]}px;
   line-height: 33px;
 
   letter-spacing: -0.015em;
@@ -64,7 +64,7 @@ export const Answer = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
   line-height: 33px;
 
   letter-spacing: -0.015em;

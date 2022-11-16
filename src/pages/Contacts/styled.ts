@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Title = styled.h2`
-  font-size: 80px;
+  font-size: ${({ theme }) => theme.fonts.sizes[10]}px;
   line-height: 88px;
   letter-spacing: -0.015em;
   color: ${({ theme }) => theme.colors.black};
@@ -18,7 +18,7 @@ const contactsStyles = css`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: 28px;
 
   text-align: right;
@@ -49,7 +49,7 @@ export const Labeling = styled.span`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: 24px;
 
   text-align: right;
