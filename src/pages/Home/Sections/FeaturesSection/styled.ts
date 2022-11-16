@@ -2,12 +2,7 @@ import styled from 'styled-components';
 
 import { Container, Description, BlockTitle } from 'styles';
 import { ButtonStyled } from 'components/Button/styled';
-import { SectionStyled } from 'components/Section/styled';
 import ensomeTeam from 'static/images/team.webp';
-
-export const Section = styled(SectionStyled)`
-  column-gap: ${({ theme }) => theme.gaps[10]}px;
-`;
 
 export const ContainerStyled = styled(Container)`
   column-gap: ${({ theme }) => theme.gaps[8]}px;

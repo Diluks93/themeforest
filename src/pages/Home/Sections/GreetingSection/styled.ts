@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Container, Description } from 'styles';
 import { SectionStyled } from 'components/Section/styled';
@@ -25,10 +25,6 @@ export const Title = styled.h1`
   height: ${({ theme }) => theme.sizes.title.height[0]}px;
   width: ${({ theme }) => theme.sizes.title.width[0]}px;
   font-weight: ${({ theme }) => theme.fonts.weights[4]};
-`;
-
-export const Section = styled(SectionStyled)`
-  flex-direction: column;
 `;
 
 export const Image = styled.img`

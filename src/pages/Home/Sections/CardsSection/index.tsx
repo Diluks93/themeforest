@@ -1,11 +1,17 @@
 import React, { ComponentType } from 'react';
 
 import { useCarousel } from 'hooks/useCarousel';
-import { Blog, Controls, PriceCard, TestimonialsCard } from 'components';
+import {
+  Blog,
+  Controls,
+  PriceCard,
+  TestimonialsCard,
+  Section,
+} from 'components';
 import { blogs, prices, testimonials } from 'constants/';
 
 import { CardProp, WithControlsProps } from './prop';
-import { Section, CardsStyled, ContainerStyled } from './styled';
+import { CardsStyled, ContainerStyled } from './styled';
 
 function withControls<T extends WithControlsProps>(
   Component: ComponentType<CardProp>
@@ -38,7 +44,7 @@ const Blogs = withControls(Blog);
 
 export function CardsSection() {
   return (
-    <Section>
+    <Section cardSection col>
       <Testimonials title="Testimonials" isVisibleButtons data={testimonials} />
       <Prices title="Our pricing" isVisibleButtons={false} data={prices} />
       <Blogs title="Our blog" isVisibleButtons data={blogs} />

@@ -2,6 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const SectionStyled = styled.section<{
   $odd?: boolean;
+  $isOn?: boolean;
+  $cardSection?: boolean;
+  $featureSection?: boolean;
+  $overviewSection?: boolean;
   $background?: string;
   $height?: number;
   $full?: boolean;
@@ -37,24 +41,6 @@ export const SectionStyled = styled.section<{
           background-color: ${theme.colors.primary};
         `
       : css``}
-
-  ${({ $background }) =>
-    $background
-      ? css`
-          background-image: url(${$background});
-          background-repeat: no-repeat;
-          height: 740px;
-        `
-      : css``}
-
-  ${({ $full }) =>
-    $full
-      ? css`
-          background-size: cover;
-          background-position: center/center;
-          height: 590px;
-        `
-      : css``}
   
   ${({ $height }) =>
     $height
@@ -69,4 +55,35 @@ export const SectionStyled = styled.section<{
           flex-direction: column;
         `
       : css``}
+
+  ${({ $isOn }) =>
+    $isOn
+      ? css`
+          background-color: transparent;
+        `
+      : css``};
+
+  ${({ $cardSection, theme }) =>
+    $cardSection
+      ? css`
+          padding: ${theme.sizes.container.paddings[2]}px 0;
+          row-gap: ${theme.gaps[12]}px;
+        `
+      : css``};
+
+  ${({ $featureSection, theme }) =>
+    $featureSection
+      ? css`
+          column-gap: ${theme.gaps[10]}px;
+        `
+      : css``};
+
+  ${({ $overviewSection, theme }) =>
+    $overviewSection
+      ? css`
+          row-gap: ${theme.gaps[11]}px;
+          padding: ${theme.sizes.container.paddings[2]}px 0
+            ${theme.sizes.container.paddings[1]}px;
+        `
+      : css``};
 `;

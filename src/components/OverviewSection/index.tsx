@@ -1,28 +1,22 @@
 import React from 'react';
 
-import { Customers, Statistic } from 'components';
+import { Customers, Statistic, Section } from 'components';
 import { BlockTitle } from 'styles';
 import { description, statistics } from 'constants/';
 
-import { Wrapper, Section, DescriptionStyled, ContainerStyled } from './styled';
-
-function Statistics() {
-  return (
-    <Wrapper>
-      {statistics.map(statistic => (
-        <Statistic key={statistic.id} {...statistic} />
-      ))}
-    </Wrapper>
-  );
-}
+import { Wrapper, DescriptionStyled, ContainerStyled } from './styled';
 
 export function OverviewSection() {
   return (
-    <Section $col>
+    <Section overviewSection col>
       <BlockTitle>We provide services that guarantee your success</BlockTitle>
       <ContainerStyled>
         <Wrapper $row>
-          <Statistics />
+          <Wrapper>
+            {statistics.map(statistic => (
+              <Statistic key={statistic.id} {...statistic} />
+            ))}
+          </Wrapper>
           <DescriptionStyled children={description} />
         </Wrapper>
         <Customers />

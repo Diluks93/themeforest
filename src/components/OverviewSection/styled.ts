@@ -1,13 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import { Description, Container } from 'styles';
-import { SectionStyled } from 'components/Section/styled';
-
-export const Section = styled(SectionStyled)`
-  row-gap: ${({ theme }) => theme.gaps[11]}px;
-  padding: ${({ theme }) => theme.sizes.container.paddings[2]}px 0
-    ${({ theme }) => theme.sizes.container.paddings[1]}px;
-`;
 
 export const ContainerStyled = styled(Container)`
   row-gap: ${({ theme }) => theme.gaps[11]}px;

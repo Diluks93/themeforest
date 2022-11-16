@@ -1,7 +1,7 @@
 import React, {
   createContext,
   FC,
-  ReactNode,
+  PropsWithChildren,
   useContext,
   useState,
 } from 'react';
@@ -14,12 +14,12 @@ interface LMProps {
   toggleLightMode: () => void;
 }
 
-const LightModeContext = createContext<LMProps>({
+export const LightModeContext = createContext<LMProps>({
   isLightMode: true,
   toggleLightMode: () => {},
 });
 
-const LightModeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+const LightModeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [isLightMode, setLightMode] = useState(true);
   const toggleLightMode = () => setLightMode(!isLightMode);
 
@@ -32,7 +32,7 @@ const LightModeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
 const useToggleLightMode = () => useContext(LightModeContext);
 
-const ThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const { isLightMode } = useToggleLightMode();
 
   return (

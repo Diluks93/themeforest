@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { description, PathsToPage } from 'constants/';
+import { Section } from 'components';
 import { Mark } from 'styles';
 import { Wrapper } from 'pages/Home/styled';
 
 import {
   ContainerStyled,
-  Section,
   SubTitle,
   BlockTitleStyled,
   Button,
@@ -18,7 +18,7 @@ import {
 export function FeaturesSection() {
   return (
     <>
-      <Section $col>
+      <Section featureSection col>
         <ContainerStyled>
           <SubTitle>
             The <Mark>newest</Mark> business analytics platform
@@ -31,7 +31,7 @@ export function FeaturesSection() {
           </Wrapper>
         </ContainerStyled>
       </Section>
-      <Section $odd>
+      <Section featureSection odd>
         <Background />
         <ContainerStyled>
           <Wrapper $align>

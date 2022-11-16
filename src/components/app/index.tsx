@@ -8,6 +8,7 @@ import {
   SubscriberSection,
   FooterLight,
   FooterDark,
+  VideoBackground,
 } from 'components';
 import { PathsToPage } from 'constants/';
 
@@ -38,6 +39,7 @@ export function App() {
   return (
     <Suspense fallback="Loading...">
       <Header />
+      <VideoBackground />
       <Routes>
         <Route path={PathsToPage.HOME} element={<HomePage />} />
         <Route path={PathsToPage.SOLUTIONS} element={<ErrorPage />} />

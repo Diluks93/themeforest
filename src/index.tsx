@@ -1,9 +1,11 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import { App, LightModeProvider, ThemeProvider } from 'components';
 import { GlobalStyle, FontStyles } from 'styles';
+import { store } from 'store';
 import { reportWebVitals } from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -14,9 +16,11 @@ root.render(
     <LightModeProvider>
       <ThemeProvider>
         <BrowserRouter>
-          <GlobalStyle />
-          <FontStyles />
-          <App />
+          <Provider store={store}>
+            <GlobalStyle />
+            <FontStyles />
+            <App />
+          </Provider>
         </BrowserRouter>
       </ThemeProvider>
     </LightModeProvider>

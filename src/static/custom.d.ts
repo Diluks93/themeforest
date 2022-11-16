@@ -14,3 +14,4 @@ declare module '*.woff2';
 declare module '*.woff';
 declare module '*.otf';
 declare module '*.eot';
+declare module '*.mp4';
