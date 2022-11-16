@@ -12,15 +12,13 @@ import {
 import { PathsToPage } from 'constants/';
 
 const HomePage = lazy(() => import('pages/Home'));
-const SolutionsPage = lazy(() => import('pages/Solutions'));
-const ElementsPage = lazy(() => import('pages/Elements'));
-const BlogPage = lazy(() => import('pages/Blog'));
 const ContactsPage = lazy(() => import('pages/Contacts'));
 const AboutUsPage = lazy(() => import('pages/AboutUs'));
 const TeamPage = lazy(() => import('pages/Team'));
 const FAQPage = lazy(() => import('pages/FAQ'));
 const ServicesPage = lazy(() => import('pages/Services'));
 const ServicePage = lazy(() => import('pages/Service'));
+const ErrorPage = lazy(() => import('pages/ErrorPage'));
 
 export function App() {
   const { pathname } = useLocation();
@@ -42,9 +40,9 @@ export function App() {
       <Header />
       <Routes>
         <Route path={PathsToPage.HOME} element={<HomePage />} />
-        <Route path={PathsToPage.SOLUTIONS} element={<SolutionsPage />} />
-        <Route path={PathsToPage.ELEMENTS} element={<ElementsPage />} />
-        <Route path={PathsToPage.BLOG} element={<BlogPage />} />
+        <Route path={PathsToPage.SOLUTIONS} element={<ErrorPage />} />
+        <Route path={PathsToPage.ELEMENTS} element={<ErrorPage />} />
+        <Route path={PathsToPage.BLOG} element={<ErrorPage />} />
         <Route path={PathsToPage.CONTACTS} element={<ContactsPage />} />
         <Route path={PathsToPage.ABOUT_US} element={<AboutUsPage />} />
         <Route path={PathsToPage.TEAM} element={<TeamPage />} />
@@ -53,14 +51,7 @@ export function App() {
           <Route index element={<ServicesPage />} />
           <Route path={PathsToPage.SERVICE} element={<ServicePage />} />
         </Route>
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
       {shouldRenderHelperSection}
       <SubscriberSection />

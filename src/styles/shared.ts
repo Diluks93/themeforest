@@ -73,7 +73,7 @@ export const Container = styled.div<{
 `;
 
 export const Description = styled.p`
-  font-family: ${({ theme }) => theme.fonts.families[2]};
+  font-family: ${({ theme }) => theme.fonts.families[1]};
   font-weight: ${({ theme }) => theme.fonts.weights[0]};
   font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
   line-height: ${({ theme }) => theme.fonts.heights[3]}px;
@@ -90,4 +90,11 @@ export const BlockTitle = styled.h3`
   font-size: ${({ theme }) => theme.fonts.sizes[6]}px;
   letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
   color: ${({ theme }) => theme.colors.black};
+`;
+
+export const Main = styled.main`
+  max-width: inherit;
+  min-height: 100vh;
+  height: fit-content;
+  font-family: ${({ theme }) => theme.fonts.families[1]};
 `;

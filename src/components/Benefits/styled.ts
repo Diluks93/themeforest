@@ -35,7 +35,6 @@ export const BenefitTitle = styled.h4`
 `;
 
 export const DescriptionStyled = styled(Description)`
-  font-family: ${({ theme }) => theme.fonts.families[1]};
   font-weight: ${({ theme }) => theme.fonts.weights[0]};
   font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: ${({ theme }) => theme.fonts.heights[0]}px;
