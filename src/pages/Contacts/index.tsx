@@ -1,12 +1,19 @@
 import React from 'react';
 
-import { BreadCrumb, ContactForm, Section } from 'components';
-import { Container, Main } from 'styles';
-
-import map from 'static/images/map.webp';
+import {
+  BreadCrumb,
+  ContactForm,
+  ContactsEmail,
+  ContactsPhone,
+  ContactsAddress,
+  MapboxMap,
+  Section,
+} from 'components';
+import { ContainerStyled } from 'pages/Services/styled';
+import { Container, Main, Mark } from 'styles';
 import { Call, Location, Mail } from 'static';
 
-import { Address, Email, Mark, Phone, Title, Labeling } from './styled';
+import { Title, Labeling } from './styled';
 
 export default function ContactsPage() {
   return (
@@ -21,27 +28,25 @@ export default function ContactsPage() {
           </Title>
           <ContactForm />
         </Container>
-        <Container $flex $left>
-          <Email href="mailto:ensome@info.co.us">
+        <ContainerStyled $flex $left>
+          <ContactsEmail grey flex>
             <Labeling>
               <Mail /> Email
             </Labeling>
-            ensome@info.co.us
-          </Email>
-          <Phone href="tel:+1 601-201-5580">
+          </ContactsEmail>
+          <ContactsPhone grey flex>
             <Labeling>
               <Call /> Phone
             </Labeling>
-            +1 601-201-5580
-          </Phone>
-          <Address>
+          </ContactsPhone>
+          <ContactsAddress grey flex>
             <Labeling>
               <Location /> Address
             </Labeling>
-            1642 Washington Avenue, Jackson, MS, 39201
-          </Address>
-        </Container>
+          </ContactsAddress>
+        </ContainerStyled>
       </Section>
+      <MapboxMap />
     </Main>
   );
 }

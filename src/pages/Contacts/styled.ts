@@ -1,64 +1,27 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Title = styled.h2`
   font-size: ${({ theme }) => theme.fonts.sizes[10]}px;
-  line-height: 88px;
-  letter-spacing: -0.015em;
+  line-height: ${({ theme }) => theme.fonts.heights[8]}px;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
   color: ${({ theme }) => theme.colors.black};
-  width: 540px;
-  font-weight: 800;
-`;
-
-export const Mark = styled.mark`
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.primary};
-`;
-
-const contactsStyles = css`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
-  line-height: 28px;
-
-  text-align: right;
-  letter-spacing: -0.015em;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-
-  color: ${({ theme }) => theme.colors.grey};
-`;
-
-export const Phone = styled.a`
-  ${contactsStyles}
-`;
-
-export const Email = styled.a`
-  ${contactsStyles}
-`;
-
-export const Address = styled.address`
-  ${contactsStyles}
-  font-style: normal;
+  width: ${({ theme }) => theme.sizes.title.width[0]}px;
+  font-weight: ${({ theme }) => theme.fonts.weights[4]};
 `;
 
 export const Labeling = styled.span`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[2]};
   font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
-  line-height: 24px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
 
   text-align: right;
-  letter-spacing: -0.01em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[0]}em;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: ${({ theme }) => theme.gaps[4]}px;
   color: ${({ theme }) => theme.colors.black};
   svg {
     fill: ${({ theme }) => theme.colors.black};

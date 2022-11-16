@@ -25,14 +25,20 @@ export function App() {
   const { pathname } = useLocation();
   const { type } = useTheme();
 
-  const shouldRenderHelperSection = useMemo(() => {
+  const shouldRenderSubSections = useMemo(() => {
     switch (pathname) {
       case PathsToPage.CONTACTS:
+        return null;
       case PathsToPage.TEAM:
       case PathsToPage.ABOUT_US:
-        return null;
+        return <SubscriberSection />;
       default:
-        return <HelperSection />;
+        return (
+          <>
+            <HelperSection />
+            <SubscriberSection />
+          </>
+        );
     }
   }, [pathname]);
 
@@ -55,8 +61,7 @@ export function App() {
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      {shouldRenderHelperSection}
-      <SubscriberSection />
+      {shouldRenderSubSections}
       {type === 'light' ? <FooterDark /> : <FooterLight />}
     </Suspense>
   );

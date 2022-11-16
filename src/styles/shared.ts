@@ -37,6 +37,7 @@ export const Container = styled.div<{
     $align
       ? css`
           align-items: flex-start;
+          padding-top: 18px;
         `
       : css``}
 

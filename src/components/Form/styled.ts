@@ -8,6 +8,7 @@ export const FormStyled = styled.form`
   gap: 20px;
   flex-direction: column;
   align-items: flex-end;
+  padding-top: 15px;
 `;
 
 export const Wrapper = styled.div`

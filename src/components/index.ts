@@ -41,3 +41,4 @@ export { Tab } from './Tab';
 export { Controls } from './Controls';
 export { TestimonialsCard } from './TestimonialsCard';
 export { VideoBackground } from './VideoBackground';
+export { MapboxMap } from './MapboxMap';

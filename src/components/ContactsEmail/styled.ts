@@ -2,7 +2,29 @@ import styled, { css } from 'styled-components';
 
 import { pathArrowRight } from 'static';
 
-export const EmailStyled = styled.a<{ $grey?: boolean }>`
+export const styles = css<{ $grey?: boolean; $flex?: boolean }>`
+  ${({ $grey }) =>
+    $grey
+      ? css`
+          color: ${({ theme }) => theme.colors.footer};
+        `
+      : css`
+          color: ${({ theme }) => theme.colors.white};
+        `}
+
+  ${({ $flex, theme }) =>
+    $flex
+      ? css`
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          font-weight: ${theme.fonts.weights[0]};
+          gap: 12px;
+        `
+      : css``}
+`;
+
+export const EmailStyled = styled.a<{ $grey?: boolean; $flex?: boolean }>`
   letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
   display: flex;
   column-gap: ${({ theme }) => theme.gaps[0]}px;
@@ -23,14 +45,13 @@ export const EmailStyled = styled.a<{ $grey?: boolean }>`
     filter: grayscale(1);
   }
 
+  ${styles}
   ${({ $grey }) =>
     $grey
       ? css`
-          color: ${({ theme }) => theme.colors.footer};
           font-weight: ${({ theme }) => theme.fonts.weights[0]};
         `
       : css`
-          color: ${({ theme }) => theme.colors.white};
           font-weight: ${({ theme }) => theme.fonts.weights[2]};
         `}
 `;
