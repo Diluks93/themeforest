@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { BreadCrumb, ContactForm, Section } from 'components';
-import { Container } from 'styles';
+import { Container, Main } from 'styles';
 
 import map from 'static/images/map.webp';
 import { Call, Location, Mail } from 'static';
@@ -10,8 +10,8 @@ import { Address, Email, Mark, Phone, Title, Labeling } from './styled';
 
 export default function ContactsPage() {
   return (
-    <>
-      <Section id="contacts" col height={660}>
+    <Main>
+      <Section id="contacts" col>
         <Container>
           <BreadCrumb left />
         </Container>
@@ -42,7 +42,6 @@ export default function ContactsPage() {
           </Address>
         </Container>
       </Section>
-      <Section background={map} height={460} odd />
-    </>
+    </Main>
   );
 }

@@ -66,7 +66,7 @@ export const baseTheme = {
     },
     card: {
       height: [371, 482],
-      width: [350],
+      width: [350, 540],
       padding: [35],
     },
   },

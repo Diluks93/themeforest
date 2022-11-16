@@ -7,42 +7,28 @@ import {
   MainTitle,
   CardService,
 } from 'components';
-import {
-  BigAnalytic,
-  BigBrain,
-  BigData,
-  BigIntelligence,
-  BigKey,
-  BigUpper,
-} from 'static';
-import { Container } from 'styles';
+import { serviceCards } from 'constants/';
+import { Main } from 'styles';
 
-const services = [
-  { title: 'Machine learning', icon: <BigBrain /> },
-  { title: 'Embed analytics', icon: <BigAnalytic /> },
-  { title: 'Access control', icon: <BigKey /> },
-  { title: 'Data analytics', icon: <BigData /> },
-  { title: 'Big data consulting', icon: <BigUpper /> },
-  { title: 'Artificial intelligence', icon: <BigIntelligence /> },
-];
+import { ContainerStyled } from './styled';
 
 export default function ServicesPage() {
   return (
-    <>
-      <Section height={400} id="services">
-        <Container>
+    <Main>
+      <Section id="services">
+        <ContainerStyled>
           <BreadCrumb left />
           <MainTitle subtitle="Services" title="Data Analytics Services" />
-        </Container>
+        </ContainerStyled>
       </Section>
       <Section>
-        <Container $row>
-          {services.map(service => (
-            <CardService {...service} key={service.title} id={service.title} />
+        <ContainerStyled $row>
+          {serviceCards.map(card => (
+            <CardService {...card} key={card.title} id={card.title} />
           ))}
-        </Container>
+        </ContainerStyled>
       </Section>
-      <OverviewSection />
-    </>
+      <OverviewSection service />
+    </Main>
   );
 }

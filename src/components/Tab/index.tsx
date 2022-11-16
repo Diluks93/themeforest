@@ -1,25 +1,23 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Minus, Plus } from 'static';
 
 import { Answer, Button, Question, QuestionBlock, TabStyled } from './styled';
 
-function TabWithoutMemo({ question }: { question: string }) {
-  const [isShowAnswer, showAnswer] = useState(false);
+export function Tab({ question }: { question: string }) {
+  const [on, toggle] = useState(false);
 
-  const handleClick = useCallback(() => {
-    showAnswer(!isShowAnswer);
-  }, [isShowAnswer]);
+  const handleClick = () => {
+    toggle(!on);
+  };
 
   return (
-    <TabStyled>
+    <TabStyled onClick={handleClick}>
       <QuestionBlock>
-        <Question $open={isShowAnswer}>{question}</Question>
-        <Button $open={isShowAnswer} onClick={handleClick}>
-          {isShowAnswer ? <Plus /> : <Minus />}
-        </Button>
+        <Question $open={on}>{question}</Question>
+        <Button $open={on}>{on ? <Plus /> : <Minus />}</Button>
       </QuestionBlock>
-      {isShowAnswer && (
+      {on && (
         <Answer>
           Phasellus tristique eu nisl eu consectetur. Morbi urna massa,
           imperdiet in mauris et, euismod vestibulum lacus. Integer enim elit,
@@ -30,5 +28,3 @@ function TabWithoutMemo({ question }: { question: string }) {
     </TabStyled>
   );
 }
-
-export const Tab = memo(TabWithoutMemo);

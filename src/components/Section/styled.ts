@@ -82,8 +82,6 @@ export const SectionStyled = styled.section<{
     $overviewSection
       ? css`
           row-gap: ${theme.gaps[11]}px;
-          padding: ${theme.sizes.container.paddings[2]}px 0
-            ${theme.sizes.container.paddings[1]}px;
         `
       : css``};
 `;

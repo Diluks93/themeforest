@@ -1,17 +1,20 @@
+import { Title } from 'components/Blogs/styled';
 import styled, { css } from 'styled-components';
+import { Description } from 'styles';
 
 export const TabStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 35px;
-  gap: 15px;
+  padding: ${({ theme }) => theme.sizes.card.padding[0]}px;
+  gap: ${({ theme }) => theme.gaps[5]}px;
 
   width: 100%;
   height: fit-content;
 
   border: 1px solid ${({ theme }) => theme.colors.grey};
-  border-radius: 6px;
+  border-radius: ${({ theme }) => theme.borderRadius}px;
+  cursor: pointer;
 `;
 
 export const QuestionBlock = styled.div`
@@ -21,15 +24,7 @@ export const QuestionBlock = styled.div`
   width: 100%;
 `;
 
-export const Question = styled.h4<{ $open: boolean }>`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-size: ${({ theme }) => theme.fonts.sizes[4]}px;
-  line-height: 33px;
-
-  letter-spacing: -0.015em;
-
+export const Question = styled(Title)<{ $open: boolean }>`
   ${({ $open, theme }) =>
     $open
       ? css`
@@ -60,14 +55,4 @@ export const Button = styled.button<{ $open: boolean }>`
         `}
 `;
 
-export const Answer = styled.p`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
-  line-height: 33px;
-
-  letter-spacing: -0.015em;
-
-  color: ${({ theme }) => theme.colors.grey};
-`;
+export const Answer = styled(Description)``;

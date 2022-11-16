@@ -1,4 +1,15 @@
-import { Brain, Upper, Key, Analytic } from 'static';
+import {
+  Brain,
+  Upper,
+  Key,
+  Analytic,
+  BigAnalytic,
+  BigBrain,
+  BigData,
+  BigIntelligence,
+  BigKey,
+  BigUpper,
+} from 'static';
 import avatar1 from 'static/images/001_img_person.webp';
 import avatar2 from 'static/images/002_img_person.webp';
 import avatar3 from 'static/images/003_img_person.webp';
@@ -136,4 +147,23 @@ export const quickLinks = [
   PathsToPage.ABOUT_US,
   PathsToPage.SERVICES,
   PathsToPage.FAQ,
+];
+
+export const serviceCards = [
+  { title: 'Machine learning', icon: <BigBrain /> },
+  { title: 'Embed analytics', icon: <BigAnalytic /> },
+  { title: 'Access control', icon: <BigKey /> },
+  { title: 'Data analytics', icon: <BigData /> },
+  { title: 'Big data consulting', icon: <BigUpper /> },
+  { title: 'Artificial intelligence', icon: <BigIntelligence /> },
+];
+
+export const questions = [
+  'What are data analytics?',
+  'What is data mining?',
+  'What is business intelligence?',
+  'What is exploratory data analysis (EDA)?',
+  'What is confirmatory data analysis (CDA)?',
+  'What are predictive analytics?',
+  'What is data visualisation',
 ];

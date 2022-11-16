@@ -1,4 +1,4 @@
-import React, { memo, PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { useSelector } from 'react-redux';
 
 import { useScrollSmooth } from 'hooks/useScrollSmooth';
@@ -6,7 +6,7 @@ import { RootState } from 'store';
 
 import { SectionStyled } from './styled';
 
-function SectionWithoutMemo({
+export function Section({
   children,
   id,
   odd,
@@ -52,5 +52,3 @@ function SectionWithoutMemo({
     </SectionStyled>
   );
 }
-
-export const Section = memo(SectionWithoutMemo);

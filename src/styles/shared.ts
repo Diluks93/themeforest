@@ -24,17 +24,10 @@ export const Container = styled.div<{
           column-gap: ${({ theme }) => theme.gaps[2]}px;
         `}
 
-  ${({ $unique }) =>
-    $unique
-      ? css`
-          column-gap: ${({ theme }) => theme.gaps[3]}px;
-        `
-      : css``}
-
   ${({ $row }) =>
     $row
       ? css`
-          gap: 30px;
+          gap: ${({ theme }) => theme.gaps[8]}px;
           flex-wrap: wrap;
           flex-direction: row;
         `

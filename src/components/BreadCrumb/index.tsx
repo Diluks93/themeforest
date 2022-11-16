@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 import { useNamePath } from 'hooks/useNamePath';
 
@@ -8,7 +8,8 @@ import { BredCrumbProp } from './prop';
 
 export function BreadCrumb({ left }: BredCrumbProp) {
   const { pathname } = useLocation();
-  const path = useNamePath(pathname);
+  const { serviceId } = useParams();
+  const path = useNamePath(serviceId ? serviceId : pathname);
 
   return (
     <Wrapper $left={left}>

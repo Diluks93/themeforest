@@ -1,9 +1,29 @@
 import styled, { css } from 'styled-components';
 
-import { Description, Container } from 'styles';
+import { Description, Container, BlockTitle } from 'styles';
 
-export const ContainerStyled = styled(Container)`
+const serviceStyles = css`
+  padding: 0;
+`;
+
+export const ContainerStyled = styled(Container)<{ $service?: boolean }>`
   row-gap: ${({ theme }) => theme.gaps[11]}px;
+
+  ${({ $service, theme }) =>
+    $service
+      ? serviceStyles
+      : css`
+          padding-bottom: ${theme.sizes.container.paddings[1]}px;
+        `}
+`;
+
+export const BlockTitleStyled = styled(BlockTitle)<{ $service?: boolean }>`
+  ${({ $service, theme }) =>
+    $service
+      ? serviceStyles
+      : css`
+          padding-top: ${theme.sizes.container.paddings[2]}px;
+        `}
 `;
 
 export const DescriptionStyled = styled(Description)`

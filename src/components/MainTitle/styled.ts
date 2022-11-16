@@ -1,40 +1,38 @@
 import styled from 'styled-components';
 
+import { Description } from 'styles';
+
 export const SubTitle = styled.h6`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[3]};
   font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
-  line-height: 24px;
+  line-height: ${({ theme }) => theme.fonts.heights[0]}px;
 
   text-align: center;
-  letter-spacing: -0.015em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
 
   color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Title = styled.h2`
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 800;
-  font-size: ${({ theme }) => theme.fonts.sizes[6]}px;
-  line-height: 60px;
+  font-family: ${({ theme }) => theme.fonts.families[0]};
+  font-weight: ${({ theme }) => theme.fonts.weights[4]};
+  font-size: ${({ theme }) => theme.fonts.sizes[7]}px;
+  line-height: ${({ theme }) => theme.fonts.heights[6]}px;
 
   text-align: center;
-  letter-spacing: -0.015em;
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
 
   color: ${({ theme }) => theme.colors.black};
 `;
 
-export const Description = styled.p`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: ${({ theme }) => theme.fonts.sizes[3]}px;
-  line-height: 33px;
+export const Wrapper = styled.div`
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+`;
 
+export const DescriptionStyled = styled(Description)`
   text-align: center;
-  letter-spacing: -0.015em;
-
-  color: ${({ theme }) => theme.colors.grey};
 `;

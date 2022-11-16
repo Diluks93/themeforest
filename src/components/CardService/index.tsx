@@ -1,28 +1,22 @@
 import React from 'react';
 
+import { DescriptionStyled, StyledLink, Title } from 'components/Blogs/styled';
 import { PathsToPage } from 'constants/';
 import { ArrowRight } from 'static';
 
-import { CardStyled, Title, Description, StyledLink } from './styled';
+import { CardStyled } from './styled';
+import { CardServiceProp } from './prop';
 
-export function CardService({
-  title,
-  icon,
-  id,
-}: {
-  title: string;
-  icon: JSX.Element;
-  id: string;
-}) {
+export function CardService({ title, icon, id }: CardServiceProp) {
   return (
     <CardStyled>
       {icon}
       <Title>{title}</Title>
-      <Description>
+      <DescriptionStyled>
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
         blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
         et quas. Quis autem vel eum iure
-      </Description>
+      </DescriptionStyled>
       <StyledLink to={`${PathsToPage.SERVICES}/${id}`}>
         Read more
         <ArrowRight />

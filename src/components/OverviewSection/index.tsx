@@ -1,16 +1,22 @@
 import React from 'react';
 
 import { Customers, Statistic, Section } from 'components';
-import { BlockTitle } from 'styles';
 import { description, statistics } from 'constants/';
 
-import { Wrapper, DescriptionStyled, ContainerStyled } from './styled';
+import {
+  Wrapper,
+  DescriptionStyled,
+  ContainerStyled,
+  BlockTitleStyled,
+} from './styled';
 
-export function OverviewSection() {
+export function OverviewSection({ service }: { service?: boolean }) {
   return (
     <Section overviewSection col>
-      <BlockTitle>We provide services that guarantee your success</BlockTitle>
-      <ContainerStyled>
+      <BlockTitleStyled $service={service}>
+        We provide services that guarantee your success
+      </BlockTitleStyled>
+      <ContainerStyled $service={service}>
         <Wrapper $row>
           <Wrapper>
             {statistics.map(statistic => (

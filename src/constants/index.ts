@@ -10,4 +10,6 @@ export {
   information,
   about,
   quickLinks,
+  serviceCards,
+  questions,
 } from './constants';

@@ -1,7 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Container, Description } from 'styles';
-import { SectionStyled } from 'components/Section/styled';
 
 export const ContainerStyled = styled(Container)`
   column-gap: ${({ theme }) => theme.gaps[3]}px;
