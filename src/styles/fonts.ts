@@ -25,6 +25,10 @@ import OpenSansSemiBold from 'static/fonts/Open_Sans/open-sans-v34-latin-600.ttf
 import OpenSansSemiBoldE from 'static/fonts/Open_Sans/open-sans-v34-latin-600.eot';
 import OpenSansSemiBoldW2 from 'static/fonts/Open_Sans/open-sans-v34-latin-600.woff2';
 import OpenSansSemiBoldW from 'static/fonts/Open_Sans/open-sans-v34-latin-600.woff';
+import OpenSansExtraBold from 'static/fonts/Open_Sans/open-sans-v34-latin-800.ttf';
+import OpenSansExtraBoldE from 'static/fonts/Open_Sans/open-sans-v34-latin-800.eot';
+import OpenSansExtraBoldW2 from 'static/fonts/Open_Sans/open-sans-v34-latin-800.woff2';
+import OpenSansExtraBoldW from 'static/fonts/Open_Sans/open-sans-v34-latin-800.woff';
 
 export const FontStyles = createGlobalStyle`
 
@@ -92,5 +96,15 @@ export const FontStyles = createGlobalStyle`
        url(${OpenSansSemiBoldW2}) format('woff2'),
        url(${OpenSansSemiBoldW}) format('woff'),
        url(${OpenSansSemiBoldE}) format('eot');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 800;
+  src: url(${OpenSansExtraBold}) format('ttf'),
+       url(${OpenSansExtraBoldW2}) format('woff2'),
+       url(${OpenSansExtraBoldW}) format('woff'),
+       url(${OpenSansExtraBoldE}) format('eot');
 }
 `;

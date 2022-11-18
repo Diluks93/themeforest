@@ -1,30 +1,19 @@
-import React, { ChangeEvent, memo, useCallback } from 'react';
+import React, { ChangeEvent } from 'react';
 
+import { FieldProp } from './prop';
 import { FieldStyled, FieldsetStyled, Error } from './styled';
 
-type KindOfField = 'text' | 'email' | 'textarea';
-
-function FieldWithoutMemo({
+export function Field({
   fieldName,
   text,
   fieldType,
   fieldValue,
   hasError,
   onFieldChange,
-}: {
-  fieldName: string;
-  text: string;
-  fieldType: KindOfField;
-  fieldValue: string;
-  hasError: boolean;
-  onFieldChange: (fieldName: string, value: string) => void;
-}) {
-  const handleFieldChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      onFieldChange(fieldName, event.currentTarget.value);
-    },
-    [onFieldChange, fieldName]
-  );
+}: FieldProp) {
+  const handleFieldChange = (event: ChangeEvent<HTMLInputElement>) => {
+    onFieldChange(fieldName, event.currentTarget.value);
+  };
 
   return (
     <FieldsetStyled>
@@ -44,5 +33,3 @@ function FieldWithoutMemo({
     </FieldsetStyled>
   );
 }
-
-export const Field = memo(FieldWithoutMemo);

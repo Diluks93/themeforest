@@ -2,18 +2,21 @@ import React from 'react';
 
 import {
   BreadCrumb,
-  ContactForm,
   ContactsEmail,
   ContactsPhone,
   ContactsAddress,
+  ContactUsForm,
   MapboxMap,
   Section,
 } from 'components';
+import { withValidationForm } from 'HOCs';
 import { ContainerStyled } from 'pages/Services/styled';
 import { Container, Main, Mark } from 'styles';
 import { Call, Location, Mail } from 'static';
 
 import { Title, Labeling } from './styled';
+
+const ContactForm = withValidationForm(ContactUsForm);
 
 export default function ContactsPage() {
   return (

@@ -12,4 +12,6 @@ export {
   quickLinks,
   serviceCards,
   questions,
+  dataAboutUs,
+  feedback,
 } from './constants';

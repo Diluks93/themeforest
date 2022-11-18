@@ -29,6 +29,7 @@ export const baseTheme = {
   shadows: {
     button: '0px 12px 30px rgba(24, 92, 255, 0.18)',
     card: '0px 4px 12px rgba(12, 68, 204, 0.1)',
+    form: '0px 12px 30px 17px rgba(24, 92, 255, 0.04)',
   },
 
   sizes: {
@@ -68,6 +69,10 @@ export const baseTheme = {
       height: [371, 482],
       width: [350, 540],
       padding: [35],
+    },
+    image: {
+      height: [425],
+      width: [635],
     },
   },
 

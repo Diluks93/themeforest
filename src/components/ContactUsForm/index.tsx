@@ -1,20 +1,16 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 
 import { Field } from 'components';
 
 import { FormStyled, Wrapper, Button } from './styled';
+import { FormProp } from 'HOCs/withValidationFormHOC/prop';
 
-export function Form({
+export function ContactUsForm({
   onSubmit,
   onFieldChange,
   values,
   errors,
-}: {
-  onSubmit: (event: MouseEvent<HTMLFormElement>) => Promise<void>;
-  onFieldChange: (fieldName: string, value: string) => void;
-  values: Record<string, string>;
-  errors: Record<string, boolean>;
-}) {
+}: FormProp) {
   return (
     <FormStyled onSubmit={onSubmit} noValidate>
       <Wrapper>

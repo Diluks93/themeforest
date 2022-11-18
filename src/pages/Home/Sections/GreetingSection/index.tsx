@@ -13,8 +13,7 @@ export function GreetingSection() {
       <Section col>
         <ContainerStyled>
           <Title>
-            Find true power in your data with
-            <Mark>Ensome</Mark>
+            Find true power in your data with <Mark>Ensome</Mark>
           </Title>
           <DescriptionStyled>
             {description}

@@ -1,14 +1,11 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 
+import { ContactProp } from 'components/ContactsEmail/prop';
 import { AddressStyled } from './styled';
 
-export function ContactsAddress({
-  grey,
-  flex,
-  children,
-}: PropsWithChildren<{ grey?: boolean; flex?: boolean }>) {
+export function ContactsAddress({ grey, black, flex, children }: ContactProp) {
   return (
-    <AddressStyled $grey={grey} $flex={flex}>
+    <AddressStyled $grey={grey} $black={black} $flex={flex}>
       <a
         href="https://goo.gl/maps/pNeKrDXwvQEsKQXW7"
         target="_blank"

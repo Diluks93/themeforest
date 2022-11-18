@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 import { styles } from 'components/ContactsEmail/styled';
+import { StyledContactProp } from 'components/ContactsEmail/prop';
 
-export const PhoneStyled = styled.a<{ $grey?: boolean; $flex?: boolean }>`
+export const PhoneStyled = styled.a<StyledContactProp>`
   font-family: ${({ theme }) => theme.fonts.families[1]};
   font-weight: ${({ theme }) => theme.fonts.weights[0]};
   font-size: ${({ theme }) => theme.fonts.sizes[1]}px;

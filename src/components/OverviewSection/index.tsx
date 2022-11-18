@@ -10,7 +10,13 @@ import {
   BlockTitleStyled,
 } from './styled';
 
+const MAXIMUM_QUANTITY = 3;
+
 export function OverviewSection({ service }: { service?: boolean }) {
+  const renderStatistics = statistics
+    .slice(0, MAXIMUM_QUANTITY)
+    .map(statistic => <Statistic key={statistic.id} {...statistic} />);
+
   return (
     <Section overviewSection col>
       <BlockTitleStyled $service={service}>
@@ -18,11 +24,7 @@ export function OverviewSection({ service }: { service?: boolean }) {
       </BlockTitleStyled>
       <ContainerStyled $service={service}>
         <Wrapper $row>
-          <Wrapper>
-            {statistics.map(statistic => (
-              <Statistic key={statistic.id} {...statistic} />
-            ))}
-          </Wrapper>
+          <Wrapper>{renderStatistics}</Wrapper>
           <DescriptionStyled children={description} />
         </Wrapper>
         <Customers />

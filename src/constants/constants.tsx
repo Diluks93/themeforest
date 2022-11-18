@@ -16,6 +16,8 @@ import avatar3 from 'static/images/003_img_person.webp';
 import blog1 from 'static/images/001_img_blog.webp';
 import blog2 from 'static/images/002_img_blog.webp';
 import blog3 from 'static/images/003_img_blog.webp';
+import team1 from 'static/images/img_10.webp';
+import team2 from 'static/images/img_11.webp';
 
 import { PathsToPage } from './router';
 
@@ -23,6 +25,32 @@ export const description =
   'Sed ut perspiciatis unde omnis iste natus error sit voluptat em accusantium doloremque laudantium, totam rem aperiam, eaque ipsaquae ab illo inventore veritatis et quasi architecto beatae vitaedicta sunt explicabo.';
 
 const smallDescription = description.slice(0, 112);
+
+const descriptionWhoWeAre =
+  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium. Aliquam gravida nisi vel convallis ultricies. Integer ante sapien, consequat et dolor vel, cursus lacinia lectus.';
+
+const descriptionOurMission =
+  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Donec tincidunt tempor quam, non mollis quam finibus nec. Quisque finibus consequat felis vel pretium.';
+
+export const feedback =
+  '“Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum.”';
+
+export const dataAboutUs = [
+  {
+    id: 1,
+    title: 'Who we are',
+    description: descriptionWhoWeAre,
+    src: team1,
+    reverse: false,
+  },
+  {
+    id: 2,
+    title: 'Our mission',
+    description: descriptionOurMission,
+    src: team2,
+    reverse: true,
+  },
+];
 
 export const statistics = [
   {
@@ -39,6 +67,11 @@ export const statistics = [
     id: 3,
     number: '390',
     description: 'Data management',
+  },
+  {
+    id: 4,
+    number: '220',
+    description: 'Data analytics',
   },
 ];
 

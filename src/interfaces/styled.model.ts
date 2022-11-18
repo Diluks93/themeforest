@@ -61,6 +61,10 @@ export interface InterfaceTheme {
       width: number[];
       padding: number[];
     };
+    image: {
+      height: number[];
+      width: number[];
+    };
   };
 
   borderRadius: number;
@@ -78,6 +82,7 @@ export interface InterfaceTheme {
   shadows: {
     button: string;
     card: string;
+    form: string;
   };
 
   media: {

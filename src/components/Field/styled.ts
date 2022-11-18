@@ -1,5 +1,14 @@
 import styled, { css } from 'styled-components';
 
+export const styles = css`
+  font-family: ${({ theme }) => theme.fonts.families[1]};
+  font-weight: ${({ theme }) => theme.fonts.weights[2]};
+  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
+
+  letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
+  color: ${({ theme }) => theme.colors.hover};
+`;
+
 export const FieldStyled = styled.input<{
   $maxHeight?: boolean;
   $error?: boolean;
@@ -14,22 +23,10 @@ export const FieldStyled = styled.input<{
   border-radius: 6px;
   outline: none;
 
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
-
-  letter-spacing: -0.015em;
-  color: ${({ theme }) => theme.colors.hover};
+  ${styles}
 
   &::placeholder {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
-
-    letter-spacing: -0.015em;
-    color: ${({ theme }) => theme.colors.hover};
+    ${styles}
   }
 
   &:hover,

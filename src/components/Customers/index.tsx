@@ -2,15 +2,17 @@ import React from 'react';
 
 import { Logo3, Logo4, Logo5, Logo6, Logo7, WildWood } from 'static';
 
-export function Customers() {
+import { Wrapper } from './styled';
+
+export function Customers({ isBrighter }: { isBrighter?: boolean }) {
   return (
-    <div>
+    <Wrapper $filter={isBrighter}>
       <WildWood />
       <Logo7 />
       <Logo3 />
       <Logo4 />
       <Logo5 />
       <Logo6 />
-    </div>
+    </Wrapper>
   );
 }

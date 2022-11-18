@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CardProp } from 'pages/Home/Sections/CardsSection/prop';
+import { CardProp } from 'HOCs/withControlsHOC/prop';
 import { description } from 'constants/';
 import {
   Avatar,

@@ -1,18 +1,26 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { Description } from 'styles';
 
-export const CardStyled = styled.div`
+export const CardStyled = styled.div<{ $isBig?: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding: ${({ theme }) => theme.sizes.card.padding[0]}px;
   gap: ${({ theme }) => theme.gaps[7]}px;
-  width: ${({ theme }) => theme.sizes.card.width[0]}px;
   height: ${({ theme }) => theme.sizes.card.height[0]}px;
   background: ${({ theme }) => theme.colors.background};
   box-shadow: ${({ theme }) => theme.shadows.card};
+
+  ${({ $isBig, theme }) =>
+    $isBig
+      ? css`
+          width: ${theme.sizes.card.width[1]}px;
+        `
+      : css`
+          width: ${theme.sizes.card.width[0]}px;
+        `}
 `;
 
 export const Avatar = styled.img`

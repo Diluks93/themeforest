@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
-const sameStyles = css`
+const styles = css`
   font-family: ${({ theme }) => theme.fonts.families[1]};
   font-style: normal;
 `;
 
-export const Number = styled.span`
-  font-weight: ${({ theme }) => theme.fonts.weights[3]};
+export const Number = styled.span<{ $large?: boolean }>`
+  font-weight: ${({ theme }) => theme.fonts.weights[4]};
   font-size: ${({ theme }) => theme.fonts.sizes[8]}px;
 
   display: flex;
@@ -15,10 +15,19 @@ export const Number = styled.span`
 
   color: ${({ theme }) => theme.colors.primary};
 
-  ${sameStyles}
+  ${styles}
+
+  ${({ $large }) =>
+    $large
+      ? css`
+          font-size: ${({ theme }) => theme.fonts.sizes[9]}px;
+        `
+      : css`
+          font-size: ${({ theme }) => theme.fonts.sizes[8]}px;
+        `}
 `;
 
-export const Description = styled.span`
+export const Description = styled.span<{ $bold?: boolean }>`
   font-weight: ${({ theme }) => theme.fonts.weights[0]};
   font-size: ${({ theme }) => theme.fonts.sizes[2]}px;
   line-height: ${({ theme }) => theme.fonts.heights[1]}px;
@@ -26,11 +35,30 @@ export const Description = styled.span`
   letter-spacing: ${({ theme }) => theme.fonts.spacings[1]}em;
   color: ${({ theme }) => theme.colors.grey};
 
-  ${sameStyles}
+  ${styles}
+
+  ${({ $bold }) =>
+    $bold
+      ? css`
+          font-weight: ${({ theme }) => theme.fonts.weights[2]};
+        `
+      : css`
+          font-weight: ${({ theme }) => theme.fonts.weights[0]};
+        `}
 `;
 
-export const StatisticStyled = styled.div`
+export const StatisticStyled = styled.div<{ $center?: boolean }>`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+
+  ${({ $center, theme }) =>
+    $center
+      ? css`
+          align-items: center;
+          row-gap: ${theme.gaps[1]}px;
+          width: 255px;
+        `
+      : css`
+          align-items: flex-start;
+        `}
 `;

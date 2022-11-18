@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PathsToPage } from 'constants/';
-import { CardProp } from 'pages/Home/Sections/CardsSection/prop';
+import { CardProp } from 'HOCs/withControlsHOC/prop';
 import { ArrowRight } from 'static';
 
 import {

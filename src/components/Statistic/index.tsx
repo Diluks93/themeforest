@@ -1,20 +1,13 @@
-import React, { memo } from 'react';
+import React from 'react';
+import { StatisticProp } from './prop';
 
 import { Number, Description, StatisticStyled } from './styled';
 
-function StatisticWithoutMemo({
-  number,
-  description,
-}: {
-  number: string;
-  description: string;
-}) {
+export function Statistic({ number, description, isCenter }: StatisticProp) {
   return (
-    <StatisticStyled>
-      <Number>{number}</Number>
-      <Description>{description}</Description>
+    <StatisticStyled $center={isCenter}>
+      <Number $large={isCenter}>{number}</Number>
+      <Description $bold={isCenter}>{description}</Description>
     </StatisticStyled>
   );
 }
-
-export const Statistic = memo(StatisticWithoutMemo);
