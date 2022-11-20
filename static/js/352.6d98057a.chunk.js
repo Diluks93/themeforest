@@ -1,0 +1,4 @@
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[352],{2352:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});n(390);var s=n(56),r=n(8268),i=n(8187),u=n(5758),c=n(2559);function o(){return(0,c.jsxs)(u.or,{children:[(0,c.jsx)(s.$0,{id:"faq",children:(0,c.jsxs)(r.N,{children:[(0,c.jsx)(s.cI,{left:!0}),(0,c.jsx)(s.U3,{subtitle:"FAQs",title:"Frequently asked questions"})]})}),(0,c.jsx)(s.$0,{children:(0,c.jsx)(r.N,{$row:!0,children:i.Xl.map(((e,t)=>(0,c.jsx)(s.OK,{question:e},t)))})})]})}},8268:function(e,t,n){n.d(t,{N:function(){return i}});var s=n(2822),r=n(5758);const i=(0,s.ZP)(r.W2)`
+  padding-bottom: ${e=>{let{theme:t}=e;return t.sizes.container.paddings[2]}}px;
+`}}]);
+//# sourceMappingURL=352.6d98057a.chunk.js.map
