@@ -18,6 +18,15 @@ import blog2 from 'static/images/002_img_blog.webp';
 import blog3 from 'static/images/003_img_blog.webp';
 import team1 from 'static/images/img_10.webp';
 import team2 from 'static/images/img_11.webp';
+import member1 from 'static/images/1_member_card.webp';
+import member2 from 'static/images/2_member_card.webp';
+import member3 from 'static/images/3_member_card.webp';
+import member4 from 'static/images/4_member_card.webp';
+import member5 from 'static/images/5_member_card.webp';
+import member6 from 'static/images/6_member_card.webp';
+import member7 from 'static/images/7_member_card.webp';
+import member8 from 'static/images/8_member_card.webp';
+import member9 from 'static/images/9_member_card.webp';
 
 import { PathsToPage } from './router';
 
@@ -148,6 +157,63 @@ export const blogs = [
   { src: blog1, name: 'ISO 13485 compliance of medical devices' },
   { src: blog2, name: 'Business analysis helps you  in finance' },
   { src: blog3, name: '5 web portal examples your business can learn from' },
+];
+
+export const teamMembers = [
+  {
+    id: 0,
+    name: 'Sargis Grigor',
+    src: member1,
+    position: 'Data analyst',
+  },
+  {
+    id: 1,
+    name: 'Bagrat Leo',
+    src: member2,
+    position: 'Data engineer',
+  },
+  {
+    id: 2,
+    name: 'Gor Sargis',
+    src: member3,
+    position: 'Data analyst',
+  },
+  {
+    id: 3,
+    name: 'Maral Mari',
+    src: member4,
+    position: 'Data analyst',
+  },
+  {
+    id: 4,
+    name: 'Eva Vosgi',
+    src: member5,
+    position: 'Data scientist',
+  },
+  {
+    id: 5,
+    name: 'Eduard Vosgi',
+    src: member6,
+    position: 'Data scientist',
+  },
+  {
+    id: 6,
+    name: 'Kohar Marine',
+    src: member7,
+    position: 'Data scientist',
+  },
+  {
+    id: 7,
+    name: 'Hakob Jirair',
+    src: member8,
+    position: 'Data engineer',
+  },
+  {
+    id: 8,
+    name: 'Ararat Ohannes',
+    src: member9,
+    position: 'Data analyst',
+  },
 ];
 
 export const about = [

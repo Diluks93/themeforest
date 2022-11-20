@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div<{
   $flex?: boolean;
-  $unique?: boolean;
   $row?: boolean;
   $align?: boolean;
   $left?: boolean;

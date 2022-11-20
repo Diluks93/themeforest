@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div<{ $left?: boolean }>`
+export const Wrapper = styled.div<{ $left?: boolean; $secondary?: boolean }>`
   display: flex;
   width: 100%;
   column-gap: ${({ theme }) => theme.gaps[2]}px;
@@ -16,6 +16,15 @@ export const Wrapper = styled.div<{ $left?: boolean }>`
           justify-content: center;
           padding: 10px 0 0;
         `}
+
+  ${({ $secondary, theme }) =>
+    $secondary
+      ? css`
+          color: ${theme.colors.white};
+        `
+      : css`
+          color: ${theme.colors.grey};
+        `}
 `;
 
 const styles = css`
@@ -29,16 +38,22 @@ const styles = css`
 
 export const FirstCrumb = styled.span`
   ${styles}
-  color: ${({ theme }) => theme.colors.grey};
 `;
 
-export const LastCrumb = styled.span`
+export const LastCrumb = styled.span<{ $secondary?: boolean }>`
   ${styles}
-  color: ${({ theme }) => theme.colors.black};
   text-transform: capitalize;
+
+  ${({ $secondary, theme }) =>
+    $secondary
+      ? css`
+          color: ${theme.colors.white};
+        `
+      : css`
+          color: ${theme.colors.black};
+        `}
 `;
 
 export const Divider = styled.span`
   ${styles}
-  color: ${({ theme }) => theme.colors.grey};
 `;

@@ -6,11 +6,10 @@ export const SectionStyled = styled.section<{
   $cardSection?: boolean;
   $featureSection?: boolean;
   $overviewSection?: boolean;
-  $background?: string;
-  $height?: number;
   $full?: boolean;
   $col?: boolean;
   $primary?: boolean;
+  $secondary?: boolean;
 }>`
   font-family: 'Manrope';
   font-style: normal;
@@ -41,14 +40,14 @@ export const SectionStyled = styled.section<{
           background-color: ${theme.colors.primary};
         `
       : css``}
-  
-  ${({ $height }) =>
-    $height
+
+  ${({ $secondary, theme }) =>
+    $secondary
       ? css`
-          height: ${$height}px;
+          background-color: ${theme.colors.secondary};
         `
       : css``}
-
+  
   ${({ $col }) =>
     $col
       ? css`

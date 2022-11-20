@@ -116,5 +116,6 @@ export const darkTheme: DefaultTheme = {
     footer: baseTheme.colors.grey,
     footerColor: baseTheme.colors.grey,
     backgroundFooter: baseTheme.colors.background,
+    secondary: baseTheme.colors.white,
   },
 };

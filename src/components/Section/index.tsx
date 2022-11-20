@@ -10,11 +10,10 @@ export function Section({
   children,
   id,
   odd,
-  background,
-  height,
   full,
   col,
   primary,
+  secondary,
   cardSection,
   featureSection,
   overviewSection,
@@ -22,12 +21,12 @@ export function Section({
   odd?: boolean;
   full?: boolean;
   primary?: boolean;
+  secondary?: boolean;
   col?: boolean;
   cardSection?: boolean;
   featureSection?: boolean;
   overviewSection?: boolean;
   id?: string;
-  background?: string;
   height?: number;
 }>) {
   const ref = useScrollSmooth(id);
@@ -39,8 +38,7 @@ export function Section({
       id={id}
       $odd={odd}
       $primary={primary}
-      $background={background}
-      $height={height}
+      $secondary={secondary}
       $full={full}
       $col={col}
       $isOn={isPlay}
