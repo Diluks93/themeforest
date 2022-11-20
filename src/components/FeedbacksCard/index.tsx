@@ -11,14 +11,14 @@ import {
 import { CardProp } from 'HOCs/withControlsHOC/prop';
 import { feedback } from 'constants/';
 
-export function FeedbacksCard({ src, name, post }: CardProp) {
+export function FeedbacksCard({ src, name, position }: CardProp) {
   return (
     <CardStyled $isBig>
       <Avatar src={src} alt="avatar" />
       <DescriptionStyled children={feedback} />
       <Column>
         <Name>{name}</Name>
-        <Post>{post}</Post>
+        <Post>{position}</Post>
       </Column>
     </CardStyled>
   );

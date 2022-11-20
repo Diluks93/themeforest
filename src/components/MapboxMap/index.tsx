@@ -27,7 +27,7 @@ export function MapboxMap() {
     });
 
     setMap(mapboxMap);
-
+    console.log(mapboxMap);
     return () => {
       mapboxMap.remove();
     };

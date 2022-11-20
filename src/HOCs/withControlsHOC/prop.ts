@@ -1,7 +1,7 @@
 export type CardProp = {
   name: string;
   src?: string;
-  post?: string;
+  position?: string;
   price?: string;
   services?: string[];
 };

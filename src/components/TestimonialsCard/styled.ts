@@ -25,6 +25,10 @@ export const CardStyled = styled.div<{ $isBig?: boolean }>`
 
 export const Avatar = styled.img`
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: top;
 `;
 
 export const Wrapper = styled.div`

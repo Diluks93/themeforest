@@ -5,7 +5,6 @@ import { ButtonStyled } from 'components/Button/styled';
 export const HeaderStyled = styled.header`
   height: ${({ theme }) => theme.sizes.header.height}px;
   background-color: ${({ theme }) => theme.colors.background};
-  font-family: ${({ theme }) => theme.fonts.families[0]};
   font-weight: ${({ theme }) => theme.fonts.weights[2]};
   font-size: ${({ theme }) => theme.fonts.sizes[1]}px;
   line-height: ${({ theme }) => theme.fonts.heights[0]}px;

@@ -3,7 +3,6 @@ export {
   description,
   statistics,
   benefits,
-  testimonials,
   prices,
   blogs,
   services,

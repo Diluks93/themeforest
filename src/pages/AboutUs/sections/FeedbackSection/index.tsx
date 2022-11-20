@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Customers, Section, FeedbacksCard } from 'components';
 import { Title } from 'components/MainTitle/styled';
-import { testimonials } from 'constants/';
+import { teamMembers } from 'constants/';
 import { Description } from 'styles';
 import { withControls } from 'HOCs';
 
@@ -28,7 +28,7 @@ export function FeedbackSection() {
         <Feedbacks
           title="What our customers say"
           isVisibleButtons
-          data={testimonials.slice(0, 2)}
+          data={teamMembers.slice(0, 2)}
         />
       </ContainerStyled>
     </Section>

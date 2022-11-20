@@ -76,6 +76,7 @@ export function withValidationForm<T extends Record<string, unknown>>(
         errors={errorsInField}
         onFieldChange={onFieldChange}
         onSubmit={onSubmit}
+        {...hocProps}
       />
     );
   };

@@ -10,9 +10,6 @@ import {
   BigKey,
   BigUpper,
 } from 'static';
-import avatar1 from 'static/images/001_img_person.webp';
-import avatar2 from 'static/images/002_img_person.webp';
-import avatar3 from 'static/images/003_img_person.webp';
 import blog1 from 'static/images/001_img_blog.webp';
 import blog2 from 'static/images/002_img_blog.webp';
 import blog3 from 'static/images/003_img_blog.webp';
@@ -105,12 +102,6 @@ export const benefits = [
     description: smallDescription,
     icon: <Analytic />,
   },
-];
-
-export const testimonials = [
-  { src: avatar2, name: 'Alex Bern', post: 'CEO by PixelPerfect' },
-  { src: avatar1, name: 'Ruben Chifundo', post: 'CEO by NOX' },
-  { src: avatar3, name: 'Tigran Nazaret', post: 'Data analyst' },
 ];
 
 export const prices = [

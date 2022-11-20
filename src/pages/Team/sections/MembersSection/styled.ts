@@ -37,6 +37,7 @@ export const Images = styled.div`
 export const Image = styled.img`
   object-fit: cover;
   border-radius: ${({ theme }) => theme.borderRadius}px;
+  filter: grayscale(1);
 `;
 
 export const Employee = styled.figcaption`

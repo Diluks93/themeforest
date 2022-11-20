@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: ${({ theme }) => theme.fonts.families[0]};
   }
 
   html,
@@ -23,18 +24,23 @@ export const GlobalStyle = createGlobalStyle`
     text-align: center;
 
     &::-webkit-scrollbar {
-      width: 0;
-      background-color: transparent;
+      width: 5px;
+      background-color: ${({ theme }) => theme.colors.background};
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: transparent;
+      border-radius: ${({ theme }) => theme.borderRadius}px;
+      background-color: ${({ theme }) => theme.colors.primary};
     }
   }
 
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  p {
+    font-family: ${({ theme }) => theme.fonts.families[1]};
   }
 
   #root {

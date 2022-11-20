@@ -12,14 +12,14 @@ import {
   DescriptionStyled,
 } from './styled';
 
-export function TestimonialsCard({ src, name, post }: CardProp) {
+export function TestimonialsCard({ src, name, position }: CardProp) {
   return (
     <CardStyled>
       <Wrapper>
         <Avatar src={src} alt="avatar" />
         <Column>
           <Name>{name}</Name>
-          <Post>{post}</Post>
+          <Post>{position}</Post>
         </Column>
       </Wrapper>
       <DescriptionStyled children={description} />
