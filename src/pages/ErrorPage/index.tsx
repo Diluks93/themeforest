@@ -1,21 +1,17 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { Main } from 'styles/shared';
-import { useScrollSmooth } from 'hooks/useScrollSmooth';
-
-import { SubTitle } from 'pages/Home/Sections/FeaturesSection/styled';
-import { Wrapper } from './styled';
+import { Section } from 'components';
+import { Wrapper, ErrorTitle } from './styled';
 
 export default function ErrorPage() {
   const { pathname } = useLocation();
-  const ref = useScrollSmooth(pathname);
 
   return (
-    <Main id={pathname} ref={ref}>
+    <Section id={pathname}>
       <Wrapper>
-        <SubTitle>Work in progress</SubTitle>
+        <ErrorTitle>Work in progress</ErrorTitle>
       </Wrapper>
-    </Main>
+    </Section>
   );
 }

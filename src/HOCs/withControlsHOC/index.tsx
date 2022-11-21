@@ -58,6 +58,7 @@ export function withControls<T extends WithControlsProps>(
           {...hocProps}
           handleLeftClick={handleLeftClick}
           handleRightClick={handleRightClick}
+          disabledControls={cards.length === hocProps.countCards}
         />
         <CardsStyled ref={node} $transform={currentIndex * shift.current}>
           {cards.map((card, index) => (

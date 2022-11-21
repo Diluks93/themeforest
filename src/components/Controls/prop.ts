@@ -3,4 +3,5 @@ export interface ControlsProp {
   isVisibleButtons: boolean;
   handleLeftClick: () => void;
   handleRightClick: () => void;
+  disabledControls: boolean;
 }

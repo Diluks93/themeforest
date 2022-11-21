@@ -8,13 +8,12 @@ import {
   CardService,
 } from 'components';
 import { serviceCards } from 'constants/';
-import { Main } from 'styles';
 
 import { ContainerStyled } from './styled';
 
 export default function ServicesPage() {
   return (
-    <Main>
+    <>
       <Section id="services">
         <ContainerStyled>
           <BreadCrumb left />
@@ -29,6 +28,6 @@ export default function ServicesPage() {
         </ContainerStyled>
       </Section>
       <OverviewSection service />
-    </Main>
+    </>
   );
 }

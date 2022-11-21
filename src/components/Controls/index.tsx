@@ -10,16 +10,25 @@ export function Controls({
   isVisibleButtons,
   handleLeftClick,
   handleRightClick,
+  disabledControls,
 }: ControlsProp) {
   return (
     <Header>
       <BlockTitleStyled>{title}</BlockTitleStyled>
       {isVisibleButtons && (
         <Buttons>
-          <Button onClick={handleLeftClick}>
+          <Button
+            onClick={handleLeftClick}
+            $disabled={disabledControls}
+            disabled={disabledControls}
+          >
             <ArrowLeft />
           </Button>
-          <Button onClick={handleRightClick}>
+          <Button
+            onClick={handleRightClick}
+            $disabled={disabledControls}
+            disabled={disabledControls}
+          >
             <ArrowRight />
           </Button>
         </Buttons>

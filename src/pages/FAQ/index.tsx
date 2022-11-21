@@ -3,11 +3,10 @@ import React from 'react';
 import { BreadCrumb, MainTitle, Section, Tab } from 'components';
 import { ContainerStyled } from 'pages/Services/styled';
 import { questions } from 'constants/';
-import { Main } from 'styles';
 
 export default function FAQPage() {
   return (
-    <Main>
+    <>
       <Section id="faq">
         <ContainerStyled>
           <BreadCrumb left />
@@ -21,6 +20,6 @@ export default function FAQPage() {
           ))}
         </ContainerStyled>
       </Section>
-    </Main>
+    </>
   );
 }

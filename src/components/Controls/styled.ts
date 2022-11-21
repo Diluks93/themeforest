@@ -25,7 +25,7 @@ export const Buttons = styled.nav`
   height: 60px;
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ $disabled: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -38,9 +38,11 @@ export const Button = styled.button`
   background: ${({ theme }) => theme.colors.tertiary};
   border: none;
   border-radius: 20px;
+  cursor: pointer;
 
   svg {
-    fill: ${({ theme }) => theme.colors.grey};
+    fill: ${({ theme, $disabled }) =>
+      $disabled ? theme.colors.grey : theme.colors.primary};
     width: 30px;
     height: 30px;
     filter: grayscale(1);

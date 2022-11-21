@@ -11,6 +11,7 @@ import {
   VideoBackground,
 } from 'components';
 import { PathsToPage } from 'constants/';
+import { Main } from 'styles';
 
 const HomePage = lazy(() => import('pages/Home'));
 const ContactsPage = lazy(() => import('pages/Contacts'));
@@ -46,21 +47,23 @@ export function App() {
     <Suspense fallback="Loading...">
       <Header />
       <VideoBackground />
-      <Routes>
-        <Route path={PathsToPage.HOME} element={<HomePage />} />
-        <Route path={PathsToPage.SOLUTIONS} element={<ErrorPage />} />
-        <Route path={PathsToPage.ELEMENTS} element={<ErrorPage />} />
-        <Route path={PathsToPage.BLOG} element={<ErrorPage />} />
-        <Route path={PathsToPage.CONTACTS} element={<ContactsPage />} />
-        <Route path={PathsToPage.ABOUT_US} element={<AboutUsPage />} />
-        <Route path={PathsToPage.TEAM} element={<TeamPage />} />
-        <Route path={PathsToPage.FAQ} element={<FAQPage />} />
-        <Route path={PathsToPage.SERVICES}>
-          <Route index element={<ServicesPage />} />
-          <Route path={PathsToPage.SERVICE} element={<ServicePage />} />
-        </Route>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
+      <Main>
+        <Routes>
+          <Route path={PathsToPage.HOME} element={<HomePage />} />
+          <Route path={PathsToPage.SOLUTIONS} element={<ErrorPage />} />
+          <Route path={PathsToPage.ELEMENTS} element={<ErrorPage />} />
+          <Route path={PathsToPage.BLOG} element={<ErrorPage />} />
+          <Route path={PathsToPage.CONTACTS} element={<ContactsPage />} />
+          <Route path={PathsToPage.ABOUT_US} element={<AboutUsPage />} />
+          <Route path={PathsToPage.TEAM} element={<TeamPage />} />
+          <Route path={PathsToPage.FAQ} element={<FAQPage />} />
+          <Route path={PathsToPage.SERVICES}>
+            <Route index element={<ServicesPage />} />
+            <Route path={PathsToPage.SERVICE} element={<ServicePage />} />
+          </Route>
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Main>
       {shouldRenderSubSections}
       {type === 'light' ? <FooterDark /> : <FooterLight />}
     </Suspense>

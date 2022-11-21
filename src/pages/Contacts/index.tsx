@@ -11,7 +11,7 @@ import {
 } from 'components';
 import { withValidationForm } from 'HOCs';
 import { ContainerStyled } from 'pages/Services/styled';
-import { Container, Main, Mark } from 'styles';
+import { Container, Mark } from 'styles';
 import { Call, Location, Mail } from 'static';
 
 import { Title, Labeling } from './styled';
@@ -20,7 +20,7 @@ const ContactForm = withValidationForm(ContactUsForm);
 
 export default function ContactsPage() {
   return (
-    <Main>
+    <>
       <Section id="contacts" col>
         <Container>
           <BreadCrumb left />
@@ -50,6 +50,6 @@ export default function ContactsPage() {
         </ContainerStyled>
       </Section>
       <MapboxMap />
-    </Main>
+    </>
   );
 }
