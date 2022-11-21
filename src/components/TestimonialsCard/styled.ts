@@ -12,14 +12,16 @@ export const CardStyled = styled.div<{ $isBig?: boolean }>`
   height: ${({ theme }) => theme.sizes.card.height[0]}px;
   background: ${({ theme }) => theme.colors.background};
   box-shadow: ${({ theme }) => theme.shadows.card};
+  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  width: 100%;
 
   ${({ $isBig, theme }) =>
     $isBig
       ? css`
-          width: ${theme.sizes.card.width[1]}px;
+          min-width: ${theme.sizes.card.width[1]}px;
         `
       : css`
-          width: ${theme.sizes.card.width[0]}px;
+          min-width: ${theme.sizes.card.width[0]}px;
         `}
 `;
 

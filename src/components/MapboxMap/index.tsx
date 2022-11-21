@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -10,28 +10,20 @@ enum CORD {
 }
 
 export function MapboxMap() {
-  const [, setMap] = useState<mapboxgl.Map>();
-  const mapNode = useRef(null);
+  const map = React.useRef<mapboxgl.Map>();
+  const mapNode = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const node = mapNode.current;
-    if (typeof window === 'undefined' || node === null) return;
+    if (map.current) return;
 
-    const mapboxMap = new mapboxgl.Map({
-      container: node,
+    map.current = new mapboxgl.Map({
+      container: mapNode.current as HTMLDivElement,
       accessToken: process.env.REACT_APP_MAPBOX_TOKEN || '',
       style: process.env.REACT_APP_MAPBOX_STYLES || '',
       center: [CORD.longitude, CORD.latitude],
       zoom: 12.9,
-      attributionControl: false,
     });
-
-    setMap(mapboxMap);
-    console.log(mapboxMap);
-    return () => {
-      mapboxMap.remove();
-    };
-  }, []);
+  });
 
   return <MapboxMapStyled ref={mapNode} />;
 }

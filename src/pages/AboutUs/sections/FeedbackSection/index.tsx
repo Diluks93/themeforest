@@ -28,7 +28,9 @@ export function FeedbackSection() {
         <Feedbacks
           title="What our customers say"
           isVisibleButtons
-          data={teamMembers.slice(0, 2)}
+          data={teamMembers}
+          countCards={2}
+          duration={3000}
         />
       </ContainerStyled>
     </Section>

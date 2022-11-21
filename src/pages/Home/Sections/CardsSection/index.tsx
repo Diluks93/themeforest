@@ -13,10 +13,17 @@ export function CardsSection() {
       <Testimonials
         title="Testimonials"
         isVisibleButtons
-        data={teamMembers.slice(0, 3)}
+        data={teamMembers}
+        countCards={3}
+        duration={3000}
       />
-      <Prices title="Our pricing" isVisibleButtons={false} data={prices} />
-      <Blogs title="Our blog" isVisibleButtons data={blogs} />
+      <Prices
+        title="Our pricing"
+        isVisibleButtons={false}
+        data={prices}
+        countCards={4}
+      />
+      <Blogs title="Our blog" isVisibleButtons data={blogs} countCards={3} />
     </Section>
   );
 }
