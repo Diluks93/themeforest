@@ -4,9 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { App, LightModeProvider, ThemeProvider } from 'components';
-import { GlobalStyle, FontStyles } from 'styles';
+import { GlobalStyle } from 'styles';
 import { store } from 'store';
 import { reportWebVitals } from './reportWebVitals';
+import 'styles/fonts.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,7 +19,6 @@ root.render(
         <BrowserRouter>
           <Provider store={store}>
             <GlobalStyle />
-            <FontStyles />
             <App />
           </Provider>
         </BrowserRouter>

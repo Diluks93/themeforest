@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 800;
+  src: url(static/fonts/Manrope/Manrope-ExtraBold.ttf) format('truetype'),
+       url(static/fonts/Manrope/Manrope-ExtraBold.woff2) format('woff2'),
+       url(static/fonts/Manrope/Manrope-ExtraBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 700;
+  src: url(static/fonts/Manrope/Manrope-Bold.ttf) format('truetype'),
+       url(static/fonts/Manrope/Manrope-Bold.woff2) format('woff2'),
+       url(static/fonts/Manrope/Manrope-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: bold;
+  font-weight: 600;
+  src: url(static/fonts/Manrope/Manrope-SemiBold.ttf) format('truetype'),
+       url(static/fonts/Manrope/Manrope-SemiBold.woff2) format('woff2'),
+       url(static/fonts/Manrope/Manrope-SemiBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: medium;
+  font-weight: 500;
+  src: url(static/fonts/Manrope/Manrope-Medium.ttf) format('truetype'),
+       url(static/fonts/Manrope/Manrope-Medium.woff2) format('woff2'),
+       url(static/fonts/Manrope/Manrope-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: regular;
+  font-weight: 400;
+  src: url(static/fonts/Open_Sans/open-sans-v34-latin-regular.ttf) format('truetype'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-regular.woff2) format('woff2'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-regular.woff) format('woff'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-regular.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: url(static/fonts/Open_Sans/open-sans-v34-latin-700.ttf) format('truetype'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-700.woff2) format('woff2'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-700.woff) format('woff'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-700.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 600;
+  src: url(static/fonts/Open_Sans/open-sans-v34-latin-600.ttf) format('truetype'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-600.woff2) format('woff2'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-600.woff) format('woff'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-600.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: bold;
+  font-weight: 800;
+  src: url(static/fonts/Open_Sans/open-sans-v34-latin-800.ttf) format('truetype'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-800.woff2) format('woff2'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-800.woff) format('woff'),
+       url(static/fonts/Open_Sans/open-sans-v34-latin-800.eot) format('eot');
+}
