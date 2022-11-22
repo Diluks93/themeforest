@@ -1,0 +1,4 @@
+"use strict";(self.webpackChunkthemeforest=self.webpackChunkthemeforest||[]).push([[352],{2352:function(e,t,n){n.r(t),n.d(t,{default:function(){return c}});n(390);var s=n(527),r=n(8268),i=n(8187),u=n(2559);function c(){return(0,u.jsxs)(u.Fragment,{children:[(0,u.jsx)(s.$0,{id:"faq",children:(0,u.jsxs)(r.N,{children:[(0,u.jsx)(s.cI,{left:!0}),(0,u.jsx)(s.U3,{subtitle:"FAQs",title:"Frequently asked questions"})]})}),(0,u.jsx)(s.$0,{children:(0,u.jsx)(r.N,{$row:!0,children:i.Xl.map(((e,t)=>(0,u.jsx)(s.OK,{question:e},t)))})})]})}},8268:function(e,t,n){n.d(t,{N:function(){return i}});var s=n(2822),r=n(6457);const i=(0,s.ZP)(r.W2)`
+  padding-bottom: ${e=>{let{theme:t}=e;return t.sizes.container.paddings[2]}}px;
+`}}]);
+//# sourceMappingURL=352.c6267adc.chunk.js.map
