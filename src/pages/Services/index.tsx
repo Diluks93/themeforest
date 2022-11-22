@@ -23,7 +23,7 @@ export default function ServicesPage() {
       <Section>
         <ContainerStyled $row>
           {serviceCards.map(card => (
-            <CardService {...card} key={card.title} id={card.title} />
+            <CardService {...card} key={card.id} id={card.title} />
           ))}
         </ContainerStyled>
       </Section>

@@ -9,6 +9,12 @@ import {
   BigIntelligence,
   BigKey,
   BigUpper,
+  SelfService,
+  Warehousing,
+  Visualization,
+  BigDataSolution,
+  Database,
+  Calendar,
 } from 'static';
 import blog1 from 'static/images/001_img_blog.webp';
 import blog2 from 'static/images/002_img_blog.webp';
@@ -240,12 +246,56 @@ export const quickLinks = [
 ];
 
 export const serviceCards = [
-  { title: 'Machine learning', icon: <BigBrain /> },
-  { title: 'Embed analytics', icon: <BigAnalytic /> },
-  { title: 'Access control', icon: <BigKey /> },
-  { title: 'Data analytics', icon: <BigData /> },
-  { title: 'Big data consulting', icon: <BigUpper /> },
-  { title: 'Artificial intelligence', icon: <BigIntelligence /> },
+  { id: 0, title: 'Machine learning', icon: <BigBrain /> },
+  { id: 1, title: 'Embed analytics', icon: <BigAnalytic /> },
+  { id: 2, title: 'Access control', icon: <BigKey /> },
+  { id: 3, title: 'Data analytics', icon: <BigData /> },
+  { id: 4, title: 'Big data consulting', icon: <BigUpper /> },
+  { id: 5, title: 'Artificial intelligence', icon: <BigIntelligence /> },
+];
+export const solutionCards = [
+  {
+    id: 0,
+    title: 'Data integration',
+    icon: <Database />,
+    description:
+      'Extract, transform, load (ETL) or extract, load, transform (ELT); data governance (security, availability, quality) implementation.',
+  },
+  {
+    id: 1,
+    title: 'Data integration',
+    icon: <Calendar />,
+    description:
+      'Data preparation and management; machine learning (ML); designing and implanting artificial intelligence (AI) solutions.',
+  },
+  {
+    id: 2,
+    title: 'Big data',
+    icon: <BigDataSolution />,
+    description:
+      'Big data infrastructure setup and support.; big data quality and security management; big data capture, analysis and reporting.',
+  },
+  {
+    id: 3,
+    title: 'Data warehousing',
+    icon: <Warehousing />,
+    description:
+      'The process of constructing and using a data warehouse. Data warehouse and data marts design and implementation.',
+  },
+  {
+    id: 4,
+    title: 'Self-service BI',
+    icon: <SelfService />,
+    description:
+      'Business intelligence; data analytics infrastructure design and implementation; scheduled analytics querying and reporting.',
+  },
+  {
+    id: 5,
+    title: 'Data visualization',
+    icon: <Visualization />,
+    description:
+      'Interactive dashboarding; custom and pre-built visuals; multiple visualization techniques (symbol maps, line charts, pie charts...)',
+  },
 ];
 
 export const questions = [
@@ -256,4 +306,64 @@ export const questions = [
   'What is confirmatory data analysis (CDA)?',
   'What are predictive analytics?',
   'What is data visualisation',
+];
+
+export const solutions = [
+  {
+    id: 1,
+    title: 'Data integration',
+    services: [
+      'Extract, transform, load (ETL)',
+      'Extract, load, transform (ELT)',
+      'Data governance',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Data science',
+    services: [
+      'Data preparation',
+      'Data management',
+      'Machine learning (ML)',
+      'Artificial intelligence (AI)',
+    ],
+  },
+  {
+    id: 3,
+    title: 'Big data',
+    services: [
+      'Setup and support',
+      'Quality management',
+      'Security management',
+      'Big data capture & analysis',
+    ],
+  },
+  {
+    id: 4,
+    title: 'Data warehousing',
+    services: [
+      'Data warehouse',
+      'Data marts design',
+      'Security management',
+      'Data implementation',
+    ],
+  },
+  {
+    id: 5,
+    title: 'Self-service BI',
+    services: [
+      'Data analytics infrastructure',
+      'Analytics querying & reporting',
+      'Business intelligence',
+    ],
+  },
+  {
+    id: 6,
+    title: 'Data visualization',
+    services: [
+      'Interactive dashboarding',
+      'Custom and pre-built visuals',
+      'Multiple visualization',
+    ],
+  },
 ];

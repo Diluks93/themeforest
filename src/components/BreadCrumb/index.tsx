@@ -8,8 +8,9 @@ import { BredCrumbProp } from './prop';
 
 export function BreadCrumb({ left, secondary }: BredCrumbProp) {
   const { pathname } = useLocation();
-  const { serviceId } = useParams();
-  const path = useNamePath(serviceId ? serviceId : pathname);
+  const { serviceId, solutionId } = useParams();
+  const id = serviceId || solutionId;
+  const path = useNamePath(id ? id : pathname);
 
   return (
     <Wrapper $left={left} $secondary={secondary}>

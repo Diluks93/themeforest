@@ -44,3 +44,6 @@ export { VideoBackground } from './VideoBackground';
 export { MapboxMap } from './MapboxMap';
 export { FeedbacksCard } from './FeedbacksCard';
 export { AboutUsForm } from './AboutUsForm';
+export { SubHeaderSection } from './SubHeaderSection';
+export { ContactUsSection } from './ContactUsSection';
+export { StatisticList } from './StatisticList';

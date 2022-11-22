@@ -20,6 +20,8 @@ const TeamPage = lazy(() => import('pages/Team'));
 const FAQPage = lazy(() => import('pages/FAQ'));
 const ServicesPage = lazy(() => import('pages/Services'));
 const ServicePage = lazy(() => import('pages/Service'));
+const SolutionsPage = lazy(() => import('pages/Solutions'));
+const SolutionPage = lazy(() => import('pages/Solution'));
 const ErrorPage = lazy(() => import('pages/ErrorPage'));
 
 export function App() {
@@ -32,6 +34,7 @@ export function App() {
         return null;
       case PathsToPage.TEAM:
       case PathsToPage.ABOUT_US:
+      case PathsToPage.SOLUTIONS:
         return <SubscriberSection />;
       default:
         return (
@@ -50,7 +53,10 @@ export function App() {
       <Main>
         <Routes>
           <Route path={PathsToPage.HOME} element={<HomePage />} />
-          <Route path={PathsToPage.SOLUTIONS} element={<ErrorPage />} />
+          <Route path={PathsToPage.SOLUTIONS}>
+            <Route index element={<SolutionsPage />} />
+            <Route path={PathsToPage.SOLUTION} element={<SolutionPage />} />
+          </Route>
           <Route path={PathsToPage.ELEMENTS} element={<ErrorPage />} />
           <Route path={PathsToPage.BLOG} element={<ErrorPage />} />
           <Route path={PathsToPage.CONTACTS} element={<ContactsPage />} />

@@ -3,7 +3,7 @@ import { blogs, prices, teamMembers } from 'constants/';
 
 import { withControls } from 'HOCs';
 
-const Testimonials = withControls(TestimonialsCard);
+export const Testimonials = withControls(TestimonialsCard);
 const Prices = withControls(PriceCard);
 const Blogs = withControls(Blog);
 

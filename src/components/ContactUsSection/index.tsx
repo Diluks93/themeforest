@@ -9,7 +9,7 @@ import {
 } from 'components';
 import { BlockTitle, Description } from 'styles';
 
-import { ContainerStyled } from '../AboutUsSection/styled';
+import { ContainerStyled } from '../../pages/AboutUs/sections/AboutUsSection/styled';
 import { Labeling } from 'pages/Contacts/styled';
 import { Wrapper, Block } from './styled';
 import { withValidationForm } from 'HOCs';

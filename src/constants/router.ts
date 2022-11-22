@@ -1,6 +1,7 @@
 export const enum PathsToPage {
   HOME = '/themeforest',
   SOLUTIONS = '/solutions',
+  SOLUTION = ':solutionId',
   ELEMENTS = '/elements',
   BLOG = '/blog',
   CONTACTS = '/contacts',

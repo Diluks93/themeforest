@@ -1,15 +1,18 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { BreadCrumb, Section } from 'components';
 import { Title } from 'components/MainTitle/styled';
 
 import { ContainerStyled } from './styled';
 
-export function SubHeaderSection() {
+export function SubHeaderSection({ title }: { title: string }) {
+  const { pathname } = useLocation();
+
   return (
-    <Section odd id="about">
+    <Section odd id={pathname}>
       <ContainerStyled>
-        <Title>About Us</Title>
+        <Title>{title}</Title>
         <BreadCrumb />
       </ContainerStyled>
     </Section>

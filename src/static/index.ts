@@ -38,6 +38,12 @@ import { ReactComponent as Location } from './icons/icon_location.svg';
 import { ReactComponent as Mail } from './icons/icon_mail.svg';
 import { ReactComponent as Plus } from './icons/icon_plus.svg';
 import { ReactComponent as Minus } from './icons/icon_minus.svg';
+import { ReactComponent as SelfService } from './icons/icon_self-service.svg';
+import { ReactComponent as Warehousing } from './icons/icon_data_warehousing.svg';
+import { ReactComponent as Visualization } from './icons/icon_data_visualization.svg';
+import { ReactComponent as BigDataSolution } from './icons/icon_big_data.svg';
+import { ReactComponent as Database } from './icons/icon_book_database.svg';
+import { ReactComponent as Calendar } from './icons/icon_calendar_data.svg';
 
 export {
   LogoBlue,
@@ -78,4 +84,10 @@ export {
   Mail,
   Plus,
   Minus,
+  SelfService,
+  Warehousing,
+  Visualization,
+  BigDataSolution,
+  Database,
+  Calendar,
 };

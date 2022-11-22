@@ -7,15 +7,14 @@ import { ArrowRight } from 'static';
 import { CardStyled } from './styled';
 import { CardServiceProp } from './prop';
 
-export function CardService({ title, icon, id }: CardServiceProp) {
+export function CardService({ title, icon, id, description }: CardServiceProp) {
   return (
     <CardStyled>
       {icon}
       <Title>{title}</Title>
       <DescriptionStyled>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui
-        blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-        et quas. Quis autem vel eum iure
+        {description ||
+          'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas. Quis autem vel eum iure'}
       </DescriptionStyled>
       <StyledLink to={`${PathsToPage.SERVICES}/${id}`}>
         Read more

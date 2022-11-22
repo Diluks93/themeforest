@@ -14,4 +14,6 @@ export {
   dataAboutUs,
   feedback,
   teamMembers,
+  solutions,
+  solutionCards,
 } from './constants';
